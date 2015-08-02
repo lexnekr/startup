@@ -246,7 +246,7 @@ img {
   color: #fff;
 }
 #about {
-  background: url('../img/background/bg-1.jpg') center center no-repeat;
+  /*background: url('../img/background/bg-1.jpg') center center no-repeat;*/
   background-size: cover;
   color: #ffffff;
 }
@@ -790,8 +790,14 @@ img {
 #team .social-icons .fa-twitter:hover {
   background: #00aced;
 }
+#team .social-icons .fa-vk:hover {
+    background: #228cda;
+}
 #team .social-icons .fa-facebook:hover {
   background: #3b5998;
+}
+#team .social-icons .fa-odnoklassniki:hover {
+    background: #FF8C32;
 }
 #team .social-icons .fa-google-plus:hover {
   background: #dd4b39;

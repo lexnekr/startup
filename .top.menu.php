@@ -1,28 +1,28 @@
 <?
 $aMenuLinks = Array(
     Array(
-        "Home",
+        "В начало",
         "#header",
         Array(),
         Array(),
         ""
     ),
     Array(
-        "Services",
+        "Возможности",
         "#services",
         Array(),
         Array(),
         ""
     ),
     Array(
-        "About",
+        "О нас",
         "#about",
         Array(),
         Array(),
         ""
     ),
     Array(
-        "Portfolio",
+        "Портфолио",
         "#portfolio",
         Array(),
         Array(),
