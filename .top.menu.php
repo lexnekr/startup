@@ -29,14 +29,14 @@ $aMenuLinks = Array(
         ""
     ),
     Array(
-        "why",
+        "Почему мы",
         "#why-chose",
         Array(),
         Array(),
         ""
     ),
     Array(
-        "Pricing",
+        "Цены",
         "#pricing",
         Array(),
         Array(),
