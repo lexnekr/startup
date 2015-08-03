@@ -427,7 +427,7 @@ img {
   color: #008A7D;
 }
 #why-chose {
-  background: url('../img/background/bg-2.jpg') center center no-repeat;
+  /*background: url('../img/background/bg-2.jpg') center center no-repeat;*/
   color: #fff;
   background-size: cover;
   overflow: hidden;
