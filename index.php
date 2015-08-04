@@ -145,117 +145,35 @@ $APPLICATION->SetTitle("Startup - Простой и динамичный шаблон для 1С-Битрикс Ста
     )
 );?>
 
-    <!-- Start Blog Section -->
-    <section id="blog">
-        <div class="container">
-            <h1 class="section-title wow fadeIn" data-wow-delay=".2s"><span>Our</span> Blog</h1>
-            <div class="row">
-                <div id="blog-slider" class="owl-carousel owl-theme">
-                    <div class="item wow fadeInLeft" data-wow-delay="0.4s">
-                        <div class="blog-wrapper">
-                            <div id="gallery" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="item active">
-                                        <img src="assets/img/blog/blog-01.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="assets/img/blog/slider1.jpg" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="assets/img/blog/slider2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <a class="left carousel-control" href="#gallery" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-                                <a class="right carousel-control" href="#gallery" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-                            </div>
-                            <div class="content">
-                                <h3>Blog Post With Slide</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
-                                <a href="#" class="redmore">Read More +</a>
-                            </div>
-                            <div class="blog-footer">
-                                <p>published: 22 january 2014</p>
-                                <span><i class="fa fa-comments"></i>30 Comments</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="blog-wrapper">
-                            <img src="assets/img/blog/blog-02.jpg" alt="">
-                            <div class="content">
-                                <h3>Featured Image Blog Post</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
-                                <a href="#" class="redmore">Read More +</a>
-                            </div>
-                            <div class="blog-footer">
-                                <p>published: 22 january 2014</p>
-                                <span><i class="fa fa-comments"></i>30 Comments</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInRight" data-wow-delay="0.4s">
-                        <div class="blog-wrapper">
-                            <div class="video">
-                                <iframe src="//player.vimeo.com/video/117934677?color=ea6a47title=0byline=0portrait=0badge=0" width="365" height="268" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                            </div>
-                            <div class="content">
-                                <h3>Video BLog Post</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
-                                <a href="#" class="redmore">Read More +</a>
-                            </div>
-                            <div class="blog-footer">
-                                <p>published: 22 january 2014</p>
-                                <span><i class="fa fa-comments"></i>30 Comments</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item wow fadeIn">
-                        <div class="blog-wrapper">
-                            <img src="assets/img/blog/blog-04.jpg" alt="">
-                            <div class="content">
-                                <h3>Blog Post With Slide</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
-                                <a href="#" class="redmore">Read More +</a>
-                            </div>
-                            <div class="blog-footer">
-                                <p>published: 22 january 2014</p>
-                                <span><i class="fa fa-comments"></i>30 Comments</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="blog-wrapper">
-                            <img src="assets/img/blog/blog-05.jpg" alt="">
-                            <div class="content">
-                                <h3>Blog Post With Slide</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
-                                <a href="#" class="redmore">Read More +</a>
-                            </div>
-                            <div class="blog-footer">
-                                <p>published: 22 january 2014</p>
-                                <span><i class="fa fa-comments"></i>30 Comments</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="blog-wrapper">
-                            <img src="assets/img/blog/blog-06.jpg" alt="">
-                            <div class="content">
-                                <h3>Blog Post With Slide</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</p>
-                                <a href="#" class="redmore">Read More +</a>
-                            </div>
-                            <div class="blog-footer">
-                                <p>published: 22 january 2014</p>
-                                <span><i class="fa fa-comments"></i>30 Comments</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Blog Section -->
+<?$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "blog",
+    array(
+        "COMPONENT_TEMPLATE" => "blog",
+        "IBLOCK_TYPE" => "startup",
+        "IBLOCK_ID" => "STARTUP_BLOG",
+        "NEWS_COUNT" => "20",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_ORDER1" => "DESC",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER2" => "ASC",
+        "PROPERTY_CODE" => array(
+            0 => "VIDEO_URL",
+            1 => "SLIDER_PREVIEW_PICTURE",
+        ),
+        "CHECK_DATES" => "Y",
+        "DETAIL_URL" => "/blog/#ELEMENT_ID#/",
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "36000000",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "ACTIVE_DATE_FORMAT" => "d.m.Y",
+        "LIST_TITLE" => "<span>Наш</span> Блог",
+        "TITLE_TYPE" => "h2",
+        "LIST_PADDING_TOP" => "N"
+    ),
+    false
+);?>
 
     <!-- Start Team Section -->
     <section id="team">
