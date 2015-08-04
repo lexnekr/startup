@@ -49,7 +49,7 @@ $APPLICATION->SetTitle("Наш Блог");
 		"LIST_PROPERTY_CODE" => array(
 			0 => "",
 			1 => "SLIDER_PREVIEW_PICTURE",
-			2 => "",
+			2 => "VIDEO_URL",
 		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "Y",
 		"DISPLAY_NAME" => "Y",
@@ -63,7 +63,7 @@ $APPLICATION->SetTitle("Наш Блог");
 			1 => "",
 		),
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
+			0 => "VIDEO_URL",
 			1 => "",
 		),
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
@@ -94,7 +94,7 @@ $APPLICATION->SetTitle("Наш Блог");
 		"LIST_TITLE" => "Наш <span>Блог</span>",
 		"LIST_PADDING_TOP" => "Y",
 		"DETAIL_TITLE" => "",
-		"DETAIL_PADDING_TOP" => "N",
+		"DETAIL_PADDING_TOP" => "Y",
 		"TITLE_TYPE" => "h3",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",

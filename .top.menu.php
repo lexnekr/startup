@@ -43,7 +43,7 @@ $aMenuLinks = Array(
         ""
     ),
     Array(
-        "Blog",
+        "Блог",
         "#blog",
         Array(),
         Array(),
