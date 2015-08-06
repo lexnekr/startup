@@ -50,8 +50,15 @@ $aMenuLinks = Array(
         ""
     ),
     Array(
-        "Team",
+        "Компанда",
         "#team",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Отзывы",
+        "#testimonial",
         Array(),
         Array(),
         ""

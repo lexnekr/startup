@@ -95,7 +95,7 @@ $APPLICATION->SetTitle("Наш Блог");
 		"LIST_PADDING_TOP" => "Y",
 		"DETAIL_TITLE" => "",
 		"DETAIL_PADDING_TOP" => "Y",
-		"TITLE_TYPE" => "h3",
+		"TITLE_TYPE" => "h1",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

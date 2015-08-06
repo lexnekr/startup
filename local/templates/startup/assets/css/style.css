@@ -806,7 +806,7 @@ img {
   background: #CC181E;
 }
 #testimonial {
-  background: url('../img/background/bg-2.jpg') center center no-repeat;
+  /*background: url('../img/background/bg-2.jpg') center center no-repeat;*/
   background-size: cover;
 }
 #testimonial .testimonial {

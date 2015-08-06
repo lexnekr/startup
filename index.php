@@ -180,211 +180,99 @@ $APPLICATION->SetTitle("Startup - Простой и динамичный шаблон для 1С-Битрикс Ста
     false
 );?>
 
-    <!-- Start Team Section -->
-    <section id="team">
-        <div class="container">
-            <h1 class="section-title wow fadeIn" data-wow-delay=".2s"><span>Our</span> Team</h1>
-            <div class="row">
+<?$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "team-preson-slider",
+    array(
+        "COMPONENT_TEMPLATE" => "about-preson-slider",
+        "IBLOCK_TYPE" => "startup",
+        "IBLOCK_ID" => "STARTUP_PERSONS",
+        "NEWS_COUNT" => "20",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_ORDER1" => "DESC",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER2" => "ASC",
+        "PROPERTY_CODE" => array(
+            0 => "",
+            1 => "FACEBOOK_LINK",
+            2 => "GOOGLEPLUS_LINK",
+            3 => "TWITTER_LINK",
+            4 => "YOUTUBE_LINK",
+            5 => "VK_LINK",
+            6 => "ODNOKLASSNII_LINK",
+            7 => "",
+        ),
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "36000000",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "SET_TITLE" => "N",
+        "SET_BROWSER_TITLE" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "team",
+        "INCLUDE_SUBSECTIONS" => "Y",
+        "SLIDER_ABOUT_TITLE" => "<span>Наша</span> Команда",
+        "PADDING_TOP" => "N",
+        "TITLE_TYPE" => "p",
+    ),
+    false
+);?>
 
-                <div class="col-sm-6 col-md-3 wow flipInY" data-wow-offset="10" data-wow-delay="0.2s">
-                    <div class="item-square">
-                        <div class="face">
-                            <img src="assets/img/team-member/team-02.jpg" alt="">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="content">
-                            <div class="title">
-                                <h3>Musharrof Chy</h3>
-                                <p>Frontend Developer</p>
-                            </div>
-                            <div class="text">
-                                <p>Sit amet. consectetur adipiscing elit. Aenean consectetur suscipit viverra Morbi non arcu blandit</p>
-                            </div>
-                            <div class="social-icons">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-vk"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<?$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "quotes",
+    array(
+        "COMPONENT_TEMPLATE" => "quotes",
+        "IBLOCK_TYPE" => "startup",
+        "IBLOCK_ID" => "5",
+        "NEWS_COUNT" => "20",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_ORDER1" => "DESC",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER2" => "ASC",
+        "FILTER_NAME" => "",
+        "FIELD_CODE" => array(
+            0 => "",
+            1 => "PROPERTY_AUTHOR.PROPERTY_COMPANY",
+            2 => "PROPERTY_AUTHOR.PROPERTY_POSITION",
+            3 => "PROPERTY_AUTHOR.PREVIEW_PICTURE",
+            4 => "PROPERTY_AUTHOR.NAME",
+            5 => "",
+        ),
+        "PROPERTY_CODE" => array(
+            0 => "",
+            1 => "AUTHOR",
+            2 => "",
+        ),
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "36000000",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "SET_TITLE" => "N",
+        "SET_BROWSER_TITLE" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "qoutes",
+        "SLIDER_ABOUT_TITLE" => "Отзывы наших Клиентов",
+        "TITLE_TYPE" => "p",
+        "PADDING_TOP" => "N",
+        "BACKGROUND_IMAGE" => "/local/templates/startup/components/bitrix/news.list/quotes/img/bg.jpg",
+        "HEIGHT_OF_AUTHOR_BLOCK" => "2"
+    ),
+    false
+);?>
 
-                <div class="col-sm-6 col-md-3 wow flipInY" data-wow-offset="10" data-wow-delay="0.4s">
-                    <div class="item-square">
-                        <div class="face">
-                            <img src="assets/img/team-member/team-01.jpg" alt="">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="content">
-                            <div class="title">
-                                <h3>Imran Khan</h3>
-                                <p>Wordpress Developer</p>
-                            </div>
-                            <div class="text">
-                                <p>Sit amet. consectetur adipiscing elit. Aenean consectetur suscipit viverra Morbi non arcu blandit</p>
-                            </div>
-                            <div class="social-icons">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-sm-6 col-md-3 wow flipInY" data-wow-offset="10" data-wow-delay="0.6s">
-                    <div class="item-square">
-                        <div class="face">
-                            <img src="assets/img/team-member/team-03.jpg" alt="">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="content active">
-                            <div class="title">
-                                <h3>Jessi Jain</h3>
-                                <p>Creative Designer</p>
-                            </div>
-                            <div class="text">
-                                <p>Sit amet. consectetur adipiscing elit. Aenean consectetur suscipit viverra Morbi non arcu blandit</p>
-                            </div>
-                            <div class="social-icons">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-vk"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 wow flipInY" data-wow-offset="10" data-wow-delay="0.8s">
-                    <div class="item-square">
-                        <div class="face">
-                            <img src="assets/img/team-member/team-04.jpg" alt="">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="content">
-                            <div class="title">
-                                <h3>M. Arman</h3>
-                                <p>Junior Developer</p>
-                            </div>
-                            <div class="text">
-                                <p>Sit amet. consectetur adipiscing elit. Aenean consectetur suscipit viverra Morbi non arcu blandit</p>
-                            </div>
-                            <div class="social-icons">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-odnoklassniki"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Team Section -->
 
-    <!-- Start Testimonial Section -->
-    <section id="testimonial">
-        <div class="container">
-            <div class="row">
-                <h2 class="section-title wow fadeIn" data-wow-delay=".2s">Testimonials</h2>
-                <div id="testimonial-slider" class="owl-carousel">
-                    <div class="item wow fadeInDown" data-wow-delay="0.3s">
-                        <div class="testimonial">
-                            <div class="testimonial-text">
-                                <i class="fa fa-quote-left"></i>
-                                <p>I Hired Anirudh Babbar to do my new website, the design was done very fast i was kept up to date regularly and I have had the website re designed and its working perfectly, I would recommend him to anyone.? TOP BLOKE!!! </p>
-                                <i class="fa fa-quote-right pull-right"></i>
-                            </div>
-                            <div class="testimonial-info">
-                                <img src="assets/img/testimonial-carousel/img-1.jpg" alt="">
-                                <p><span class="name">Sara Mandis | </span>
-                                    <span class="company">CEO - Media Wiki</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInDown"  data-wow-delay="0.6s">
-                        <div class="testimonial">
-                            <div class="testimonial-text">
-                                <i class="fa fa-quote-left"></i>
-                                <p>I Hired Anirudh Babbar to do my new website, the design was done very fast i was kept up to date regularly and I have had the website re designed and its working perfectly, I would recommend him to anyone.? TOP BLOKE!!! </p>
-                                <i class="fa fa-quote-right pull-right"></i>
-                            </div>
-                            <div class="testimonial-info">
-                                <img src="assets/img/testimonial-carousel/img-2.jpg" alt="">
-                                <p><span class="name">Sara Mandis | </span>
-                                    <span class="company">CEO - Media Wiki</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item wow fadeInDown" data-wow-delay="0.9s">
-                        <div class="testimonial">
-                            <div class="testimonial-text">
-                                <i class="fa fa-quote-left"></i>
-                                <p>I Hired Anirudh Babbar to do my new website, the design was done very fast i was kept up to date regularly and I have had the website re designed and its working perfectly, I would recommend him to anyone.? TOP BLOKE!!! </p>
-                                <i class="fa fa-quote-right pull-right"></i>
-                            </div>
-                            <div class="testimonial-info">
-                                <img src="assets/img/testimonial-carousel/img-3.jpg" alt="">
-                                <p><span class="name">Sara Mandis | </span>
-                                    <span class="company">CEO - Media Wiki</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <div class="testimonial-text">
-                                <i class="fa fa-quote-left"></i>
-                                <p>I Hired Anirudh Babbar to do my new website, the design was done very fast i was kept up to date regularly and I have had the website re designed and its working perfectly, I would recommend him to anyone.? TOP BLOKE!!! </p>
-                                <i class="fa fa-quote-right pull-right"></i>
-                            </div>
-                            <div class="testimonial-info">
-                                <img src="assets/img/testimonial-carousel/img-4.jpg" alt="">
-                                <p><span class="name">Sara Mandis | </span>
-                                    <span class="company">CEO - Media Wiki</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <div class="testimonial-text">
-                                <i class="fa fa-quote-left"></i>
-                                <p>I Hired Anirudh Babbar to do my new website, the design was done very fast i was kept up to date regularly and I have had the website re designed and its working perfectly, I would recommend him to anyone.? TOP BLOKE!!! </p>
-                                <i class="fa fa-quote-right pull-right"></i>
-                            </div>
-                            <div class="testimonial-info">
-                                <img src="assets/img/testimonial-carousel/img-1.jpg" alt="">
-                                <p><span class="name">Sara Mandis | </span>
-                                    <span class="company">CEO - Media Wiki</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimonial">
-                            <div class="testimonial-text">
-                                <i class="fa fa-quote-left"></i>
-                                <p>I Hired Anirudh Babbar to do my new website, the design was done very fast i was kept up to date regularly and I have had the website re designed and its working perfectly, I would recommend him to anyone.? TOP BLOKE!!! </p>
-                                <i class="fa fa-quote-right pull-right"></i>
-                            </div>
-                            <div class="testimonial-info">
-                                <img src="assets/img/testimonial-carousel/img-2.jpg" alt="">
-                                <p><span class="name">Sara Mandis | </span>
-                                    <span class="company">CEO - Media Wiki</span></p>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Testimonial Section -->
 
     <!-- Start Contact Section -->
     <section id="contact">
