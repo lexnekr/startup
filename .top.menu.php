@@ -62,13 +62,6 @@ $aMenuLinks = Array(
         Array(),
         Array(),
         ""
-    ),
-    Array(
-        "Contact",
-        "#contact",
-        Array(),
-        Array(),
-        ""
     )
 );
 ?>

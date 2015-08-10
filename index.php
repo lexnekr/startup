@@ -270,122 +270,38 @@ $APPLICATION->SetTitle("Startup - Простой и динамичный шаблон для 1С-Битрикс Ста
     false
 );?>
 
-
-
-
-
-    <!-- Start Contact Section -->
-    <section id="contact">
-        <div class="overlay">
-            <div class="container">
-                <h1 class="section-title wow fadeIn" data-wow-delay=".2s"><span>Contact</span> Us</h1>
-                <div class="row">
-                    <div class="contact-form">
-                        <form role="form" method="post">
-                            <div class="col-sm-6 col-md-6 wow fadeInLeft" data-wow-delay="0.2s">
-                                <div class="controls">
-                                    <input class="contact_input" type="text" name="name" placeholder="Name">
-                                    <i class="fa fa-user"></i>
-                                </div>
-                                <div class="controls">
-                                    <input class="contact_input" type="text" name="Email" placeholder="Email">
-                                    <i class="fa fa-envelope-o"></i>
-                                </div>
-                                <div class="controls">
-                                    <input class="contact_input" type="text" name="Phone" placeholder="Phone">
-                                    <i class="fa fa-phone"></i>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-6 wow fadeInRight" data-wow-delay="0.2s">
-                                <textarea name="massage" rows="7" class="form-control" placeholder="Massage"></textarea>
-                            </div>
-                            <div class="col-sm-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                                <button type="submit" id="submit" class="btn btn-common">Send</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Contact Section -->
-
-    <!-- Start Clients Section -->
-    <section id="clients">
-        <div class="container">
-            <div class="row">
-                <div id="logo-slider" class="owl-carousel owl-theme">
-                    <div class="item">
-                        <a href="#"><img src="assets/img/clients-logo/img1.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="assets/img/clients-logo/img2.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="assets/img/clients-logo/img3.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="assets/img/clients-logo/img4.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="assets/img/clients-logo/img5.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="assets/img/clients-logo/img6.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="assets/img/clients-logo/img7.png" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a href="#"><img src="assets/img/clients-logo/img8.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Clients Section -->
-
-    <!-- Start Connected Section -->
-    <section id="connected">
-        <div class="container">
-            <div class="row">
-                <h2 class="section-title wow fadeInUp" data-wow-delay=".2s">Stay Connected</h2>
-                <h3 class="discription wow fadeIn" data-wow-delay=".2s">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
-                <hr>
-                <div class="connected-wrapper text-center">
-                    <div class="col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="contact-item">
-                            <a href="#"><i class="fa fa-phone"></i></a>
-                            <h5>Customer Care</h5>
-                            <h4>0123 - 456 - 789</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="contact-item">
-                            <a href="#"><i class="fa fa-user"></i></a>
-                            <h5>Support Team</h5>
-                            <h4>support@name.com</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="contact-item">
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <h5>Twitter</h5>
-                            <h4>@example.com</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="contact-item">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <h5>Facebook</h5>
-                            <h4>example.agency</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Connected Section -->
-
+<?$APPLICATION->IncludeComponent(
+    "bitrix:news.list",
+    "brand_list",
+    array(
+        "COMPONENT_TEMPLATE" => "brand_list",
+        "IBLOCK_TYPE" => "startup",
+        "IBLOCK_ID" => "STARTUP_BRANDS",
+        "NEWS_COUNT" => "20",
+        "SORT_BY1" => "ACTIVE_FROM",
+        "SORT_ORDER1" => "DESC",
+        "SORT_BY2" => "SORT",
+        "SORT_ORDER2" => "ASC",
+        "FILTER_NAME" => "",
+        "DETAIL_URL" => "",
+        "CACHE_TYPE" => "A",
+        "CACHE_TIME" => "36000000",
+        "CACHE_FILTER" => "N",
+        "CACHE_GROUPS" => "Y",
+        "PREVIEW_TRUNCATE_LEN" => "",
+        "SET_TITLE" => "N",
+        "SET_BROWSER_TITLE" => "N",
+        "SET_META_KEYWORDS" => "N",
+        "SET_META_DESCRIPTION" => "N",
+        "SET_LAST_MODIFIED" => "N",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+        "ADD_SECTIONS_CHAIN" => "N",
+        "HIDE_LINK_WHEN_NO_DETAIL" => "Y",
+        "PARENT_SECTION" => "",
+        "PARENT_SECTION_CODE" => "clients",
+        "DISPLAY_PICTURE" => "Y"
+    ),
+    false
+);?>
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
