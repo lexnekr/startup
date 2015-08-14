@@ -27,4 +27,16 @@ $APPLICATION->SetTitle("Startup - Простой и динамичный шаблон для 1С-Битрикс Ста
 
 #PERSONS_CODE#
 
+#PORTFOLIO_CODE#
+
+#WHY_CODE#
+
+#PRICING_CODE#
+
+#BLOG_CODE#
+
+#QUOTES_CODE#
+
+#BRANDS_CODE#
+
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

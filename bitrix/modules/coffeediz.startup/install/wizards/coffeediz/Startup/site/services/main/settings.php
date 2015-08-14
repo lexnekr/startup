@@ -14,9 +14,5 @@ COption::SetOptionString("fileman", "propstypes", serialize(array(
 )), false, $siteID);
 */
 // END IMPORT PAGE PROPERTIES
-// START IMPORT MENU TYPES
-	$arMenuTypes = GetMenuTypes();
-	$arMenuTypes["top"] = GetMessage("MAIN_OPT_MENU_TOP");
-	SetMenuTypes($arMenuTypes, WIZARD_SITE_ID);
-// END IMPORT MENU TYPES
+
 ?>

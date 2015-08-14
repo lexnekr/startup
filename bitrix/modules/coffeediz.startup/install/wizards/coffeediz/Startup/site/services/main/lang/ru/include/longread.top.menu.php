@@ -22,6 +22,13 @@ $aMenuLinks = Array(
         ""
     ),
     Array(
+        "Команда",
+        "#team",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
         "Портфолио",
         "#portfolio",
         Array(),
@@ -45,13 +52,6 @@ $aMenuLinks = Array(
     Array(
         "Блог",
         "#blog",
-        Array(),
-        Array(),
-        ""
-    ),
-    Array(
-        "Команда",
-        "#team",
         Array(),
         Array(),
         ""

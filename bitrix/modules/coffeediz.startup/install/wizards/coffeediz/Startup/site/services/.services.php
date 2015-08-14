@@ -8,6 +8,8 @@ $arServices = Array(
 			"files.php",
 			"template.php",
 			"settings.php",
+            "menu.php",
+            "schema_org.php",
 			"post_event.php",
 		),
 	),
@@ -16,6 +18,12 @@ $arServices = Array(
 		"STAGES"	=> array(
 			"types.php",
 			"1.php",
+            "2.php",
+            "3.php",
+            "pricing_table.php",
+            "4.php",
+            "5.php",
+            "6.php",
 		),
 	),
 );

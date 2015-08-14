@@ -66,7 +66,7 @@ IncludeTemplateLangFile(__FILE__);
                     <i class="fa fa-bars fa-lg"></i>
                 </button>
                 <!-- logo here -->
-                <a href="/" class="navbar-brand">
+                <a href="<?=SITE_DIR?>" class="navbar-brand">
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:main.include",
                         "",
