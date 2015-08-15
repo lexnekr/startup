@@ -55,6 +55,13 @@ $aMenuLinks = Array(
         Array(),
         Array(),
         ""
+    ),
+    Array(
+        "Контакты",
+        SITE_DIR."contacts/#connected",
+        Array(),
+        Array(),
+        ""
     )
 );
 ?>

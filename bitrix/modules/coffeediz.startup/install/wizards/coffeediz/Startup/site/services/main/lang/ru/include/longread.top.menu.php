@@ -62,6 +62,13 @@ $aMenuLinks = Array(
         Array(),
         Array(),
         ""
+    ),
+    Array(
+        "Контакты",
+        "#connected",
+        Array(),
+        Array(),
+        ""
     )
 );
 ?>

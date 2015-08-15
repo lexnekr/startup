@@ -24,6 +24,7 @@ $arServices = Array(
             "4.php",
             "5.php",
             "6.php",
+            "contacts_page.php",
 		),
 	),
 );

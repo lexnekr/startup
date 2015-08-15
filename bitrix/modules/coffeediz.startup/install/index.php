@@ -47,6 +47,10 @@ Class coffeediz_startup extends CModule
             $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/components",
             $_SERVER["DOCUMENT_ROOT"]."/local/components/", true, true
         );
+        CopyDirFiles(
+            $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/".$this->MODULE_ID."/install/old_components",
+            $_SERVER["DOCUMENT_ROOT"]."/bitrix/components/", true, true
+        );
         return true;
     }
     function InstallPublic()
