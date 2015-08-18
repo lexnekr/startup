@@ -5,6 +5,8 @@ $APPLICATION->SetTitle("Контакты");
 
 <br>
 
+#FEEDBACK_FORM#
+
     <section id="connected">
         <div class="container">
             <div class="row">
