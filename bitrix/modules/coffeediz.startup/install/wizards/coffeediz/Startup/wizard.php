@@ -13,7 +13,7 @@ class license extends CWizardStep
 $wizard =& $this->GetWizard();
 $wizard->SetDefaultVars(
 			Array(
-				"siteCopyright" => GetMessage("wisCopyright"), 
+				"siteCopyright" => GetMessage("wisCopyright"),
 			)
 		);
     }
@@ -157,10 +157,37 @@ class SelectPageViewStep extends CWizardStep
     function ShowStep()
     {
 
-		$this->content = '<b>'.GetMessage("wiz_PageView_text").'</b><br>';
-		$this->content .= $this->ShowRadioField("PageView", "longread").GetMessage("wiz_longread");
-		$this->content .= '<br>';
-		$this->content .= $this->ShowRadioField("PageView", "pages").GetMessage("wiz_pages");
+        $this->content .= '
+<table cellpadding="5" cellspacing="5" align="center" style="text-align: center;">
+<tbody>
+<tr>
+	<td>
+		'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ru/longread.png", 128, 300, "border=0 vspace=15").'
+	</td>
+	<td>
+		'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ru/pages.png", 461, 300, "border=0 vspace=15").'
+	</td>
+</tr>
+<tr>
+	<td>
+		'.GetMessage("wiz_longread").'
+	</td>
+	<td>
+		'.GetMessage("wiz_pages").'
+	</td>
+</tr>
+<tr>
+	<td>
+		'.$this->ShowRadioField("PageView", "longread").'
+	</td>
+	<td>
+		'.$this->ShowRadioField("PageView", "pages").'
+	</td>
+</tr>
+</tbody>
+</table>
+';
+
 
     }
 
@@ -222,7 +249,7 @@ class FinishStep extends CFinishWizardStep
 		//		$this->content .= '<center><b><a href="/bitrix/admin/composite.php?lang=ru">'.GetMessage("FINISH_STEP_COMPOSITE_LINK").'</a></b></center>';
 
 		//		$this->content .= '<br/><br/><b>'.GetMessage("FINISH_STEP_CONTENT").'</b>';
-		
+
         if ($wizard->GetVar("installDemoData") == "Y")
             $this->content .= GetMessage("FINISH_STEP_REINDEX");
     }

@@ -210,7 +210,9 @@ $contacts_code = '
 		"MESSAGE_404" => "",
 		"SLIDE_LINK_ID" => "connected"
 	)
-);?><?$APPLICATION->IncludeComponent(
+);?>
+#SCHEMA_ORG_ADRESS_CODE#
+<?$APPLICATION->IncludeComponent(
 	"bitrix:map.google.view",
 	".default",
 	array(
