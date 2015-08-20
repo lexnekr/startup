@@ -14,16 +14,7 @@ $APPLICATION->SetTitle("Startup - Простой и динамичный шаблон для 1С-Битрикс Ста
     )
 );?>
 
-<?$APPLICATION->IncludeComponent(
-    "bitrix:main.include",
-    "",
-    Array(
-        "AREA_FILE_SHOW" => "sect",
-        "EDIT_TEMPLATE" => "",
-        "AREA_FILE_SUFFIX" => "slide_2",
-        "AREA_FILE_RECURSIVE" => "Y"
-    )
-);?>
+#SERVICES_CODE#
 
 #PERSONS_CODE#
 

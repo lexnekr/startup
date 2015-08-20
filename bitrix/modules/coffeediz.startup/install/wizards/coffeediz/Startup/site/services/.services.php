@@ -17,6 +17,7 @@ $arServices = Array(
         "NAME"		=> GetMessage("SERVICE_IBLOCK"),
         "STAGES"	=> array(
             "types.php",
+            "0.php",
             "1.php",
             "2.php",
             "3.php",
@@ -24,7 +25,6 @@ $arServices = Array(
             "4.php",
             "5.php",
             "6.php",
-            "contacts_page.php",
             "post_event.php",
         ),
     ),
