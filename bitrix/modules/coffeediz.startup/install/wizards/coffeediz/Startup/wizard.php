@@ -6,34 +6,34 @@ class license extends CWizardStep
     function InitStep()
     {
         $this->SetTitle(GetMessage("wiz_license_title"));
-		$this->SetStepID("license");
-		$this->SetNextStep("SelectSiteStep");
-		$this->SetNextCaption(GetMessage("wiz_install"));
-		$this->SetPrevCaption(GetMessage("wiz_uninstall"));
-$wizard =& $this->GetWizard();
-$wizard->SetDefaultVars(
-			Array(
-				"siteCopyright" => GetMessage("wisCopyright"),
-			)
-		);
+        $this->SetStepID("license");
+        $this->SetNextStep("SelectSiteStep");
+        $this->SetNextCaption(GetMessage("wiz_install"));
+        $this->SetPrevCaption(GetMessage("wiz_uninstall"));
+        $wizard =& $this->GetWizard();
+        $wizard->SetDefaultVars(
+            Array(
+                "siteCopyright" => GetMessage("wisCopyright"),
+            )
+        );
     }
 
     function ShowStep()
     {
 
-		$this->content .= '<h1>'.GetMessage("wiz_license_title").'</h1>';
-		$this->content .= GetMessage("wiz_license_text");
-		$this->content .= $this->ShowCheckboxField("license", "yes")." Принимаю";
+        $this->content .= '<h1>'.GetMessage("wiz_license_title").'</h1>';
+        $this->content .= GetMessage("wiz_license_text");
+        $this->content .= $this->ShowCheckboxField("license", "yes")." Принимаю";
     }
 
     function OnPostForm()
     {
         $wizard =& $this->GetWizard();
 
-		$license = $wizard->GetVar("license");
-		if ($license != "yes") $this->SetError("Вы не приняли лицензионное соглашение", "license");
+        $license = $wizard->GetVar("license");
+        if ($license != "yes") $this->SetError("Вы не приняли лицензионное соглашение", "license");
 
-		$wizard->SetVar("siteCopyright", GetMessage("wisCopyright"));
+        $wizard->SetVar("siteCopyright", GetMessage("wisCopyright"));
     }
 
 }
@@ -44,11 +44,11 @@ class SelectSiteStep extends CSelectSiteWizardStep
     {
         parent::InitStep();
         $wizard =& $this->GetWizard();
-		$this->SetStepID("SelectSiteStep");
-		$this->SetNextStep("ColorTheme");
-		$this->SetPrevStep("license");
-		$this->SetNextCaption(GetMessage("wiz_install"));
-		$this->SetPrevCaption(GetMessage("wiz_uninstall"));
+        $this->SetStepID("SelectSiteStep");
+        $this->SetNextStep("ColorTheme");
+        $this->SetPrevStep("license");
+        $this->SetNextCaption(GetMessage("wiz_install"));
+        $this->SetPrevCaption(GetMessage("wiz_uninstall"));
         $wizard->solutionName = "Startup";
     }
 }
@@ -59,23 +59,23 @@ class SelectColorThemeStep extends CWizardStep
     function InitStep()
     {
         $this->SetTitle(GetMessage("wiz_ColorTheme_title"));
-		$this->SetStepID("ColorTheme");
-		$this->SetNextStep("PageView");
-		$this->SetPrevStep("SelectSiteStep");
-		$this->SetNextCaption(GetMessage("wiz_install"));
-		$this->SetPrevCaption(GetMessage("wiz_uninstall"));
-		$wizard =& $this->GetWizard();
-		$wizard->SetDefaultVars(
-			Array(
-				"ColorTheme" => "",
-			)
-		);
+        $this->SetStepID("ColorTheme");
+        $this->SetNextStep("PageView");
+        $this->SetPrevStep("SelectSiteStep");
+        $this->SetNextCaption(GetMessage("wiz_install"));
+        $this->SetPrevCaption(GetMessage("wiz_uninstall"));
+        $wizard =& $this->GetWizard();
+        $wizard->SetDefaultVars(
+            Array(
+                "ColorTheme" => "",
+            )
+        );
     }
 
     function ShowStep()
     {
 
-		$this->content .= '
+        $this->content .= '
 <table cellpadding="5" cellspacing="5" align="center" style="text-align: center;">
 <tbody>
 <tr>
@@ -141,17 +141,17 @@ class SelectPageViewStep extends CWizardStep
     function InitStep()
     {
         $this->SetTitle(GetMessage("wiz_PageView_title"));
-		$this->SetStepID("PageView");
-		$this->SetNextStep("data_install");
-		$this->SetPrevStep("ColorTheme");
-		$this->SetNextCaption(GetMessage("wiz_install"));
-		$this->SetPrevCaption(GetMessage("wiz_uninstall"));
-		$wizard =& $this->GetWizard();
-		$wizard->SetDefaultVars(
-			Array(
-				"PageView" => "longread",
-			)
-		);
+        $this->SetStepID("PageView");
+        $this->SetNextStep("SchemaOrgStep");
+        $this->SetPrevStep("ColorTheme");
+        $this->SetNextCaption(GetMessage("wiz_install"));
+        $this->SetPrevCaption(GetMessage("wiz_uninstall"));
+        $wizard =& $this->GetWizard();
+        $wizard->SetDefaultVars(
+            Array(
+                "PageView" => "longread",
+            )
+        );
     }
 
     function ShowStep()
@@ -200,7 +200,129 @@ class SelectPageViewStep extends CWizardStep
 
 }
 
+class SchemaOrgStep extends CWizardStep
+{
+    function InitStep()
+    {
+        $this->SetTitle(GetMessage("wiz_chemaOrg_title"));
+        $this->SetStepID("SchemaOrgStep");
+        $this->SetNextStep("data_install");
+        $this->SetPrevStep("SelectPageViewStep");
+        $this->SetNextCaption(GetMessage("wiz_install"));
+        $this->SetPrevCaption(GetMessage("wiz_uninstall"));
+        $wizard =& $this->GetWizard();
+        $wizard->SetDefaultVars(
+            Array(
+                "SchemaOrg" => "Y",
+                "SchemaOrgAdress" => "",
+                "wiz_SchemaOrgAdress_settings_Name" => GetMessage("wiz_SchemaOrgAdress_settings_Name_Text"),
+                "wiz_SchemaOrgAdress_settings_POST_CODE" => GetMessage("wiz_SchemaOrgAdress_settings_POST_CODE_Default"),
+                "wiz_SchemaOrgAdress_settings_COUNTRY" => GetMessage("wiz_SchemaOrgAdress_settings_COUNTRY_Default"),
+                "wiz_SchemaOrgAdress_settings_REGION" => GetMessage("wiz_SchemaOrgAdress_settings_REGION_Default"),
+                "wiz_SchemaOrgAdress_settings_LOCALITY" => GetMessage("wiz_SchemaOrgAdress_settings_LOCALITY_Default"),
+                "wiz_SchemaOrgAdress_settings_ADDRESS" => GetMessage("wiz_SchemaOrgAdress_settings_ADDRESS_Default"),
+                "wiz_SchemaOrgAdress_settings_PHONE" => GetMessage("wiz_SchemaOrgAdress_settings_PHONE_Default"),
 
+                            )
+        );
+    }
+
+    function ShowStep()
+    {
+        $this->content .= '<h1>'.GetMessage("wiz_SchemaOrgTitle").'</h1>';
+        $this->content .= $this->ShowCheckboxField("SchemaOrg[]", "Y", Array("id" => "wiz_SchemaOrg_settings_checkbox")).GetMessage("wiz_Yes");
+        $this->content .= '
+<script>
+    document.getElementById("wiz_SchemaOrg_settings_checkbox").onchange = function(){
+        if (this.checked) {
+             document.getElementById("wiz_SchemaOrg_settings").style.display="block";
+        }
+        else {
+            document.getElementById("wiz_SchemaOrg_settings").style.display="none";
+        }
+    }
+</script>
+
+
+<table cellpadding="5" cellspacing="5" align="center">
+<tbody>
+<tr>
+	<td>
+	 '.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ru/schema_org.png", 100, 100, "border=0 vspace=15").'
+	</td>
+	<td>
+	'.GetMessage("wiz_SchemaOrg_Text_1").'
+	</td>
+</tr>
+<tr>
+    <td colspan="2">
+    <iframe width="640" height="360" frameborder="0" src="//video.yandex.ru/iframe/yacinema/7xkus6z1gj.3412/?player-type=custom&amp;show-info=false&amp;show-logo=false&amp;hd=1"></iframe>
+    </td>
+</tr>
+<tr>
+    <td colspan="2">
+    <h1 style="color:red;">'.GetMessage("wiz_SchemaOrg_Text_2").'</h1>
+    </td>
+</tr>
+<tr id="wiz_SchemaOrg_settings">
+    <td colspan="2">
+    <h1 style="color:red;">'.GetMessage("wiz_SchemaOrg_settings_title").'</h1>
+
+    <table align="center" border="1" cellpadding="5">
+        <tbody>
+            <tr>
+                <td>
+                    '.$this->ShowCheckboxField("wiz_SchemaOrgAdress_settings_checkbox[]", "Y", Array("id" => "wiz_SchemaOrgAdress_settings_checkbox")).GetMessage("wiz_SchemaOrgAdress_settings_edit").'
+                </td>
+                <td id="wiz_SchemaOrgAdress_settings" style="display: none;">
+                    <script>
+                        document.getElementById("wiz_SchemaOrgAdress_settings_checkbox").onchange = function(){
+                            if (this.checked) {
+                                 document.getElementById("wiz_SchemaOrgAdress_settings").style.display="block";
+                            }
+                            else {
+                                document.getElementById("wiz_SchemaOrgAdress_settings").style.display="none";
+                            }
+                        }
+                    </script>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_Name_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_Name', array("id" => "wiz_SchemaOrgAdress_settings_Name", "class" => "wizard-field")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_POST_CODE_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_POST_CODE', array("id" => "wiz_SchemaOrgAdress_settings_POST_CODE", "class" => "wizard-field")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_COUNTRY_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_COUNTRY', array("id" => "wiz_SchemaOrgAdress_settings_COUNTRY", "class" => "wizard-field")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_REGION_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_REGION', array("id" => "wiz_SchemaOrgAdress_settings_REGION", "class" => "wizard-field")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_LOCALITY_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_LOCALITY', array("id" => "wiz_SchemaOrgAdress_settings_LOCALITY", "class" => "wizard-field")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_ADDRESS_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_ADDRESS', array("id" => "wiz_SchemaOrgAdress_settings_ADDRESS", "class" => "wizard-field")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_PHONE_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_PHONE', array("id" => "wiz_SchemaOrgAdress_settings_PHONE", "class" => "wizard-field")).'
+                        <br>
+
+                </td>
+            </tr>
+        </tbody>
+	</table>
+
+
+    </td>
+</tr>
+</tbody>
+</table>
+        ';
+
+
+    }
+
+    function OnPostForm()
+    {
+        $wizard =& $this->GetWizard();
+        $PageView = $wizard->GetVar("SchemaOrg");
+        $wizard->SetVar("result", $PageView);
+    }
+
+}
 
 
 class DataInstallStep extends CDataInstallWizardStep
@@ -244,11 +366,11 @@ class FinishStep extends CFinishWizardStep
         $this->CreateNewIndex();
         COption::SetOptionString("main", "wizard_solution", $wizard->solutionName, false, $siteID);
         //$this->content .= "<br clear=\"all\"><a href=\"/bitrix/admin/wizard_install.php?lang=".LANGUAGE_ID."&site_id=".$siteID."&wizardName=bitrix:eshop.mobile&".bitrix_sessid_get()."\" class=\"button-next\"><span id=\"next-button-caption\">".GetMessage("wizard_store_mobile")."</span></a>";
-		//		$this->content .= GetMessage("FINISH_STEP_COMPOSITE");
-		//		$this->content .= '<br/><center><a href="/bitrix/admin/composite.php?lang=ru">'.CFile::ShowImage("/bitrix/wizards/coffeediz/Start_Bootstrap_Landing_Page/images/ru/composite.gif", 600, 250, "border=0 vspace=15").'</a></center>';
-		//		$this->content .= '<center><b><a href="/bitrix/admin/composite.php?lang=ru">'.GetMessage("FINISH_STEP_COMPOSITE_LINK").'</a></b></center>';
+        //		$this->content .= GetMessage("FINISH_STEP_COMPOSITE");
+        //		$this->content .= '<br/><center><a href="/bitrix/admin/composite.php?lang=ru">'.CFile::ShowImage("/bitrix/wizards/coffeediz/Start_Bootstrap_Landing_Page/images/ru/composite.gif", 600, 250, "border=0 vspace=15").'</a></center>';
+        //		$this->content .= '<center><b><a href="/bitrix/admin/composite.php?lang=ru">'.GetMessage("FINISH_STEP_COMPOSITE_LINK").'</a></b></center>';
 
-		//		$this->content .= '<br/><br/><b>'.GetMessage("FINISH_STEP_CONTENT").'</b>';
+        //		$this->content .= '<br/><br/><b>'.GetMessage("FINISH_STEP_CONTENT").'</b>';
 
         if ($wizard->GetVar("installDemoData") == "Y")
             $this->content .= GetMessage("FINISH_STEP_REINDEX");

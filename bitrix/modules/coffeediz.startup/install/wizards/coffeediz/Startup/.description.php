@@ -17,7 +17,8 @@ $arWizardDescription = Array(
 		"license", 
 		"SelectSiteStep", 
 		"SelectColorThemeStep", 
-		"SelectPageViewStep", 
+		"SelectPageViewStep",
+        "SchemaOrgStep",
 		"DataInstallStep", 
 		"FinishStep", 
 		"CancelStep")

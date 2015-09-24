@@ -4,18 +4,22 @@
 $SchemaOrgAdress_code = GetMessage("STARTUP_SCHEMA_ORG_ADRESS");
 
 $SchemaOrg = $wizard->GetVar("SchemaOrg");
+if ($SchemaOrg == "Y") {
+    $SchemaOrgActive = "Y";
+}
+else {
+    $SchemaOrgActive = "N";
+}
+
+
+CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/sect_footer.php", array("STARTUP_SCHEMA_ORG_ADRESS_ACTIVE" => $SchemaOrgActive));
+
 
 $PageView = $wizard->GetVar("PageView");
 
 if ($PageView == "longread") {
-	CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/_index.php", array("SCHEMA_ORG_ADRESS_CODE" => $SchemaOrgAdress_code));
-    CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/_index.php", array("STARTUP_SCHEMA_ORG_ADRESS_ACTIVE" => $SchemaOrg));
-
 }
 elseif ($PageView == "pages") {
-	CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/_index.php", array("SCHEMA_ORG_ADRESS_CODE" => ""));
-    CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/contacts/index.php", array("SCHEMA_ORG_ADRESS_CODE" => $SchemaOrgAdress_code));
-    CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/contacts/index.php", array("STARTUP_SCHEMA_ORG_ADRESS_ACTIVE" => $SchemaOrg));
 }
 
 ?>

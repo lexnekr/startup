@@ -311,7 +311,8 @@ else {
 			$GetPostTemplateEseyAdd = array_replace($GetPostTemplateEsey, $replacements);
 
 			$em = new CEventMessage;
-			$PostTemplateIDUp = $em->Update($GetPostTemplateEsey['ID'], $GetPostTemplateEseyAdd);
+//			$PostTemplateIDUp = $em->Update($GetPostTemplateEsey['ID'], $GetPostTemplateEseyAdd); //
+            $PostTemplateIDUp = $em->Update($GetPostTemplateEsey['ID'], array("LID" =>$GetPostTemplateEseyAdd['LID']));
 		}
 		$PostTemplateID=$GetPostTemplateEsey['ID'];
 		//	echo $PostTemplateID;
