@@ -222,6 +222,10 @@ class SchemaOrgStep extends CWizardStep
                 "wiz_SchemaOrgAdress_settings_LOCALITY" => GetMessage("wiz_SchemaOrgAdress_settings_LOCALITY_Default"),
                 "wiz_SchemaOrgAdress_settings_ADDRESS" => GetMessage("wiz_SchemaOrgAdress_settings_ADDRESS_Default"),
                 "wiz_SchemaOrgAdress_settings_PHONE" => GetMessage("wiz_SchemaOrgAdress_settings_PHONE_Default"),
+                "wiz_SchemaOrgAdress_settings_FAX" => GetMessage("wiz_SchemaOrgAdress_settings_FAX_Default"),
+                "wiz_SchemaOrgAdress_settings_SITE" => GetMessage("wiz_SchemaOrgAdress_settings_SITE_Default"),
+                "wiz_SchemaOrgAdress_settings_EMAIL" => GetMessage("wiz_SchemaOrgAdress_settings_EMAIL_Default"),
+                "wiz_SchemaOrgAdress_settings_TAXID" => GetMessage("wiz_SchemaOrgAdress_settings_TAXID_Default"),
 
                             )
         );
@@ -298,6 +302,14 @@ class SchemaOrgStep extends CWizardStep
                         '.GetMessage("wiz_SchemaOrgAdress_settings_ADDRESS_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_ADDRESS', array("id" => "wiz_SchemaOrgAdress_settings_ADDRESS", "class" => "wizard-field")).'
                         <br>
                         '.GetMessage("wiz_SchemaOrgAdress_settings_PHONE_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_PHONE', array("id" => "wiz_SchemaOrgAdress_settings_PHONE", "class" => "wizard-field")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_FAX_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_FAX', array("id" => "wiz_SchemaOrgAdress_settings_FAX", "class" => "wizard-field")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_SITE_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_SITE', array("id" => "wiz_SchemaOrgAdress_settings_SITE", "class" => "wizard-field")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_EMAIL_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_EMAIL', array("id" => "wiz_SchemaOrgAdress_settings_EMAIL", "class" => "wizard-field")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_TAXID_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_TAXID', array("id" => "wiz_SchemaOrgAdress_settings_TAXID", "class" => "wizard-field")).'
                         <br>
 
                 </td>
