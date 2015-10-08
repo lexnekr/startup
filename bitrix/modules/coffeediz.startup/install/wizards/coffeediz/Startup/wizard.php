@@ -211,6 +211,7 @@ class SchemaOrgStep extends CWizardStep
         $this->SetNextCaption(GetMessage("wiz_install"));
         $this->SetPrevCaption(GetMessage("wiz_uninstall"));
         $wizard =& $this->GetWizard();
+        $wiz_SchemaOrgAdress_settings_LOGO = "/bitrix/modules/coffeediz.startup/install/wizards/coffeediz/Startup/site/templates/startup/assets/img/logo.png";
         $wizard->SetDefaultVars(
             Array(
                 "SchemaOrg" => "Y",
@@ -226,6 +227,9 @@ class SchemaOrgStep extends CWizardStep
                 "wiz_SchemaOrgAdress_settings_SITE" => GetMessage("wiz_SchemaOrgAdress_settings_SITE_Default"),
                 "wiz_SchemaOrgAdress_settings_EMAIL" => GetMessage("wiz_SchemaOrgAdress_settings_EMAIL_Default"),
                 "wiz_SchemaOrgAdress_settings_TAXID" => GetMessage("wiz_SchemaOrgAdress_settings_TAXID_Default"),
+                "wiz_SchemaOrgAdress_settings_DESCRIPTION" => GetMessage("wiz_SchemaOrgAdress_settings_DESCRIPTION_Default"),
+                "wiz_SchemaOrgAdress_settings_LOGO" => $wiz_SchemaOrgAdress_settings_LOGO,
+                "wiz_SchemaOrgBreadcrumb_settings_checkbox" => "Y",
 
                             )
         );
@@ -233,6 +237,21 @@ class SchemaOrgStep extends CWizardStep
 
     function ShowStep()
     {
+        $wizard =& $this->GetWizard();
+        $wiz_SchemaOrgAdress_settings_LOGO = $wizard->GetVar("wiz_SchemaOrgAdress_settings_LOGO", true);
+
+        $wiz_SchemaOrgAdress_settings_TYPEs = array(
+            "" => GetMessage("wiz_SchemaOrgAdress_settings_TYPE_default_none"),
+            "LocalBusiness" => GetMessage("wiz_SchemaOrgAdress_settings_TYPE_default_LocalBusiness"),
+            "EducationalOrganization" => GetMessage("wiz_SchemaOrgAdress_settings_TYPE_default_EducationalOrganization"),
+            "PerformingGroup" => GetMessage("wiz_SchemaOrgAdress_settings_TYPE_default_PerformingGroup"),
+            "Airline" => GetMessage("wiz_SchemaOrgAdress_settings_TYPE_default_Airline"),
+            "Corporation" => GetMessage("wiz_SchemaOrgAdress_settings_TYPE_default_Corporation"),
+            "GovernmentOrganization" => GetMessage("wiz_SchemaOrgAdress_settings_TYPE_default_GovernmentOrganization"),
+            "NGO" => GetMessage("wiz_SchemaOrgAdress_settings_TYPE_default_NGO"),
+            "SportsOrganization" => GetMessage("wiz_SchemaOrgAdress_settings_TYPE_default_SportsOrganization"),
+        );
+
         $this->content .= '<h1>'.GetMessage("wiz_SchemaOrgTitle").'</h1>';
         $this->content .= $this->ShowCheckboxField("SchemaOrg[]", "Y", Array("id" => "wiz_SchemaOrg_settings_checkbox")).GetMessage("wiz_Yes");
         $this->content .= '
@@ -247,6 +266,11 @@ class SchemaOrgStep extends CWizardStep
     }
 </script>
 
+<style>
+.small {
+  width: 400px;
+}
+</style>
 
 <table cellpadding="5" cellspacing="5" align="center">
 <tbody>
@@ -268,12 +292,16 @@ class SchemaOrgStep extends CWizardStep
     <h1 style="color:red;">'.GetMessage("wiz_SchemaOrg_Text_2").'</h1>
     </td>
 </tr>
-<tr id="wiz_SchemaOrg_settings">
-    <td colspan="2">
-    <h1 style="color:red;">'.GetMessage("wiz_SchemaOrg_settings_title").'</h1>
+</tbody>
+</table>
 
-    <table align="center" border="1" cellpadding="5">
+    <table align="center" border="1" cellpadding="5" id="wiz_SchemaOrg_settings">
         <tbody>
+            <tr>
+                <th colspan="2">
+                    <h1 style="color:red;">'.GetMessage("wiz_SchemaOrg_settings_title").'</h1>
+                </th>
+            </tr>
             <tr>
                 <td>
                     '.$this->ShowCheckboxField("wiz_SchemaOrgAdress_settings_checkbox[]", "Y", Array("id" => "wiz_SchemaOrgAdress_settings_checkbox")).GetMessage("wiz_SchemaOrgAdress_settings_edit").'
@@ -289,39 +317,51 @@ class SchemaOrgStep extends CWizardStep
                             }
                         }
                     </script>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_Name_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_Name', array("id" => "wiz_SchemaOrgAdress_settings_Name", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_Name_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_Name', array("id" => "wiz_SchemaOrgAdress_settings_Name", "class" => "wizard-field small")).'
                         <br>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_POST_CODE_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_POST_CODE', array("id" => "wiz_SchemaOrgAdress_settings_POST_CODE", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_TYPE_Text").'<br>'.$this->ShowSelectField("wiz_SchemaOrgAdress_settings_TYPE", $wiz_SchemaOrgAdress_settings_TYPEs, Array("id" => "wiz_SchemaOrgAdress_settings_TYPE")).'
                         <br>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_COUNTRY_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_COUNTRY', array("id" => "wiz_SchemaOrgAdress_settings_COUNTRY", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_POST_CODE_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_POST_CODE', array("id" => "wiz_SchemaOrgAdress_settings_POST_CODE", "class" => "wizard-field small")).'
                         <br>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_REGION_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_REGION', array("id" => "wiz_SchemaOrgAdress_settings_REGION", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_COUNTRY_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_COUNTRY', array("id" => "wiz_SchemaOrgAdress_settings_COUNTRY", "class" => "wizard-field small")).'
                         <br>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_LOCALITY_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_LOCALITY', array("id" => "wiz_SchemaOrgAdress_settings_LOCALITY", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_REGION_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_REGION', array("id" => "wiz_SchemaOrgAdress_settings_REGION", "class" => "wizard-field small")).'
                         <br>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_ADDRESS_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_ADDRESS', array("id" => "wiz_SchemaOrgAdress_settings_ADDRESS", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_LOCALITY_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_LOCALITY', array("id" => "wiz_SchemaOrgAdress_settings_LOCALITY", "class" => "wizard-field small")).'
                         <br>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_PHONE_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_PHONE', array("id" => "wiz_SchemaOrgAdress_settings_PHONE", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_ADDRESS_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_ADDRESS', array("id" => "wiz_SchemaOrgAdress_settings_ADDRESS", "class" => "wizard-field small")).'
                         <br>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_FAX_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_FAX', array("id" => "wiz_SchemaOrgAdress_settings_FAX", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_PHONE_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_PHONE', array("id" => "wiz_SchemaOrgAdress_settings_PHONE", "class" => "wizard-field small")).'
                         <br>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_SITE_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_SITE', array("id" => "wiz_SchemaOrgAdress_settings_SITE", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_FAX_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_FAX', array("id" => "wiz_SchemaOrgAdress_settings_FAX", "class" => "wizard-field small")).'
                         <br>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_EMAIL_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_EMAIL', array("id" => "wiz_SchemaOrgAdress_settings_EMAIL", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_SITE_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_SITE', array("id" => "wiz_SchemaOrgAdress_settings_SITE", "class" => "wizard-field small")).'
                         <br>
-                        '.GetMessage("wiz_SchemaOrgAdress_settings_TAXID_Text").$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_TAXID', array("id" => "wiz_SchemaOrgAdress_settings_TAXID", "class" => "wizard-field")).'
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_EMAIL_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_EMAIL', array("id" => "wiz_SchemaOrgAdress_settings_EMAIL", "class" => "wizard-field small")).'
                         <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_TAXID_Text").'<br>'.$this->ShowInputField('text', 'wiz_SchemaOrgAdress_settings_TAXID', array("id" => "wiz_SchemaOrgAdress_settings_TAXID", "class" => "wizard-field small")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_DESCRIPTION_Text").'<br>'.$this->ShowInputField('textarea', 'wiz_SchemaOrgAdress_settings_DESCRIPTION', array("rows"=>"4", "id" => "wiz_SchemaOrgAdress_settings_DESCRIPTION", "class" => "wizard-field small")).'
+                        <br>
+                        '.GetMessage("wiz_SchemaOrgAdress_settings_LOGO_Text").'<br>'.CFile::ShowImage($wiz_SchemaOrgAdress_settings_LOGO, 206, 35, "border=0 vspace=15").'
+                        <br>
+                        '.$this->ShowFileField("wiz_SchemaOrgAdress_settings_LOGO", Array("show_file_info" => "N", "id" => "wiz_SchemaOrgAdress_settings_LOGO")).'
 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    '.$this->ShowCheckboxField("wiz_SchemaOrgBreadcrumb_settings_checkbox[]", "Y", Array("id" => "wiz_SchemaOrgBreadcrumb_settings_checkbox")).GetMessage("wiz_SchemaOrgBreadcrumb_settings_edit").'
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h3 style="color:red;">'.GetMessage("wiz_SchemaOrg_settings_PS").'</h3>
                 </td>
             </tr>
         </tbody>
 	</table>
 
-
-    </td>
-</tr>
-</tbody>
-</table>
         ';
 
 
@@ -332,6 +372,7 @@ class SchemaOrgStep extends CWizardStep
         $wizard =& $this->GetWizard();
         $PageView = $wizard->GetVar("SchemaOrg");
         $wizard->SetVar("result", $PageView);
+        $res = $this->SaveFile("wiz_SchemaOrgAdress_settings_LOGO", Array("extensions" => "gif,jpg,jpeg,png", "max_height" => 1900, "max_width" => 1900, "make_preview" => "Y"));
     }
 
 }
