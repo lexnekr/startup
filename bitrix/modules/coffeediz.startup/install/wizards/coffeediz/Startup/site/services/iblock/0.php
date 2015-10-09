@@ -124,8 +124,8 @@ $services_code = '
 		"SET_META_KEYWORDS" => "Y",
 		"SET_META_DESCRIPTION" => "Y",
 		"SET_LAST_MODIFIED" => "N",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "services",
@@ -186,8 +186,8 @@ $contacts_code = '
 		"SET_META_KEYWORDS" => "Y",
 		"SET_META_DESCRIPTION" => "Y",
 		"SET_LAST_MODIFIED" => "N",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "contacts",
@@ -211,7 +211,6 @@ $contacts_code = '
 		"SLIDE_LINK_ID" => "connected"
 	)
 );?>
-#SCHEMA_ORG_ADRESS_CODE#
 <?$APPLICATION->IncludeComponent(
 	"bitrix:map.google.view",
 	".default",

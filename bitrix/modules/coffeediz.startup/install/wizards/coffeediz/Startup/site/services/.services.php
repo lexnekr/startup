@@ -26,6 +26,7 @@ $arServices = Array(
             "5.php",
             "6.php",
             "post_event.php",
+            "schema_org.php",
         ),
     ),
 );

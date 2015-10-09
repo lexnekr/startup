@@ -23,7 +23,7 @@ class license extends CWizardStep
 
         $this->content .= '<h1>'.GetMessage("wiz_license_title").'</h1>';
         $this->content .= GetMessage("wiz_license_text");
-        $this->content .= $this->ShowCheckboxField("license", "yes")." Принимаю";
+        $this->content .= $this->ShowCheckboxField("license", "yes", array("id"=>"license")).' <label for="license">'.GetMessage("wiz_license_mess").'</label>';
     }
 
     function OnPostForm()
@@ -31,7 +31,7 @@ class license extends CWizardStep
         $wizard =& $this->GetWizard();
 
         $license = $wizard->GetVar("license");
-        if ($license != "yes") $this->SetError("Вы не приняли лицензионное соглашение", "license");
+        if ($license != "yes") $this->SetError(GetMessage("wiz_license_error"), "license");
 
         $wizard->SetVar("siteCopyright", GetMessage("wisCopyright"));
     }
@@ -214,7 +214,7 @@ class SchemaOrgStep extends CWizardStep
         $wiz_SchemaOrgAdress_settings_LOGO = "/bitrix/modules/coffeediz.startup/install/wizards/coffeediz/Startup/site/templates/startup/assets/img/logo.png";
         $wizard->SetDefaultVars(
             Array(
-                "SchemaOrg" => "Y",
+                "wiz_SchemaOrg_settings_checkbox" => "Y",
                 "SchemaOrgAdress" => "",
                 "wiz_SchemaOrgAdress_settings_Name" => GetMessage("wiz_SchemaOrgAdress_settings_Name_Text"),
                 "wiz_SchemaOrgAdress_settings_POST_CODE" => GetMessage("wiz_SchemaOrgAdress_settings_POST_CODE_Default"),
@@ -253,7 +253,7 @@ class SchemaOrgStep extends CWizardStep
         );
 
         $this->content .= '<h1>'.GetMessage("wiz_SchemaOrgTitle").'</h1>';
-        $this->content .= $this->ShowCheckboxField("SchemaOrg[]", "Y", Array("id" => "wiz_SchemaOrg_settings_checkbox")).GetMessage("wiz_Yes");
+        $this->content .= $this->ShowCheckboxField("wiz_SchemaOrg_settings_checkbox", "Y", Array("id" => "wiz_SchemaOrg_settings_checkbox")).GetMessage("wiz_Yes");
         $this->content .= '
 <script>
     document.getElementById("wiz_SchemaOrg_settings_checkbox").onchange = function(){
@@ -304,7 +304,7 @@ class SchemaOrgStep extends CWizardStep
             </tr>
             <tr>
                 <td>
-                    '.$this->ShowCheckboxField("wiz_SchemaOrgAdress_settings_checkbox[]", "Y", Array("id" => "wiz_SchemaOrgAdress_settings_checkbox")).GetMessage("wiz_SchemaOrgAdress_settings_edit").'
+                    '.$this->ShowCheckboxField("wiz_SchemaOrgAdress_settings_checkbox", "Y", Array("id" => "wiz_SchemaOrgAdress_settings_checkbox")).GetMessage("wiz_SchemaOrgAdress_settings_edit").'
                 </td>
                 <td id="wiz_SchemaOrgAdress_settings" style="display: none;">
                     <script>
@@ -351,7 +351,7 @@ class SchemaOrgStep extends CWizardStep
             </tr>
             <tr>
                 <td>
-                    '.$this->ShowCheckboxField("wiz_SchemaOrgBreadcrumb_settings_checkbox[]", "Y", Array("id" => "wiz_SchemaOrgBreadcrumb_settings_checkbox")).GetMessage("wiz_SchemaOrgBreadcrumb_settings_edit").'
+                    '.$this->ShowCheckboxField("wiz_SchemaOrgBreadcrumb_settings_checkbox", "Y", Array("id" => "wiz_SchemaOrgBreadcrumb_settings_checkbox")).GetMessage("wiz_SchemaOrgBreadcrumb_settings_edit").'
                 </td>
             </tr>
             <tr>

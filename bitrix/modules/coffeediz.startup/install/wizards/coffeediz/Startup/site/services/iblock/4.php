@@ -90,6 +90,7 @@ $blog_code = '
         "SET_BROWSER_TITLE" => "N",
         "SET_META_KEYWORDS" => "N",
         "SET_META_DESCRIPTION" => "N",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "SET_LAST_MODIFIED" => "N",
         "CHECK_DATES" => "Y",
         "DETAIL_URL" => SITE_DIR."/blog/#ELEMENT_ID#/",
