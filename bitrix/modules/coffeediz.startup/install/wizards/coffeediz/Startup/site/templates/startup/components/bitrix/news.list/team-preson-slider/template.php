@@ -26,6 +26,56 @@ $this->setFrameMode(true);
                                     <p><?=$arItem['PROPERTIES']['POSITION']['VALUE']?></p>
                                 <?endif;?>
                             </div>
+                            <?if($arParams["SCHEMAORG_PERSON"] == "Y"):?>
+                                <?$APPLICATION->IncludeComponent(
+                                    "coffeediz:schema.org.Person",
+                                    ".default",
+                                    array(
+                                        "ADDITIONALNAME" => "",
+                                        "COMPONENT_TEMPLATE" => ".default",
+                                        "FAMILYNAME" => "",
+                                        "IMAGEURL" => $arItem["PREVIEW_PICTURE"]["SRC"],
+                                        "ITEMPROP" => "",
+                                        "JOBTITLE" => $arItem["PROPERTIES"]["POSITION"]["VALUE"],
+                                        "NAME" => $arItem["NAME"],
+                                        "PERSON_EMAIL" => array(
+                                            0 => $arItem["PROPERTIES"]["EMAIL"]["VALUE"],
+                                        ),
+                                        "PERSON_PHONE" => array(
+                                            0 => $arItem["PROPERTIES"]["PHONE"]["VALUE"],
+                                        ),
+                                        "PERSON_URL" => array(),
+                                        "PERSON_URL_SAMEAS" => array(
+                                            0 => $arItem["PROPERTIES"]["RESUME_LINK"]["VALUE"],
+                                            1 => $arItem["PROPERTIES"]["FACEBOOK_LINK"]["VALUE"],
+                                            2 => $arItem["PROPERTIES"]["TWITTER_LINK"]["VALUE"],
+                                            3 => $arItem["PROPERTIES"]["GOOGLEPLUS_LINK"]["VALUE"],
+                                            4 => $arItem["PROPERTIES"]["VK_LINK"]["VALUE"],
+                                            5 => $arItem["PROPERTIES"]["YOUTUBE_LINK"]["VALUE"],
+                                            6 => $arItem["PROPERTIES"]["ODNOKLASSNII_LINK"]["VALUE"],
+                                        ),
+                                        "SHOW" => "Y",
+                                        "WORKSFORNAME" => $arItem["PROPERTIES"]["COMPANY"]["VALUE"],
+                                        "IMAGE_NAME" => $arItem["NAME"],
+                                        "IMAGE_CAPTION" => "",
+                                        "IMAGE_DESCRIPTION" => "",
+                                        "IMAGE_HEIGHT" => $arItem["PREVIEW_PICTURE"]["HEIGHT"],
+                                        "IMAGE_WIDTH" => $arItem["PREVIEW_PICTURE"]["WIDTH"],
+                                        "IMAGE_TRUMBNAIL_CONTENTURL" => "",
+                                        "WORKSFOR_TYPE_2" => "",
+                                        "WORKSFOR_DESCRIPTION" => "",
+                                        "WORKSFOR_SITE" => "",
+                                        "WORKSFOR_PHONE" => array(),
+                                        "WORKSFOR_POST_CODE" => "",
+                                        "WORKSFOR_COUNTRY" => "",
+                                        "WORKSFOR_REGION" => "",
+                                        "WORKSFOR_LOCALITY" => "",
+                                        "WORKSFOR_ADDRESS" => ""
+                                    ),
+                                    false,
+                                    array('HIDE_ICONS' => 'Y')
+                                );?>
+                            <?endif;?>
                             <div class="text">
                                 <p><?=$arItem['PREVIEW_TEXT']?></p>
                             </div>

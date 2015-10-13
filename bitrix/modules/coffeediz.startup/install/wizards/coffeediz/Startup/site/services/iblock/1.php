@@ -105,7 +105,8 @@ $persons_code = '
         "INCLUDE_SUBSECTIONS" => "Y",
         "SLIDER_ABOUT_TITLE" => "#SLIDER_ABOUT_TITLE#",
         "BACKGROUND_IMAGE" => "/local/templates/startup/components/bitrix/news.list/about-preson-slider/img/bg-1.jpg",
-        "PADDING_TOP" => "N"
+        "PADDING_TOP" => "N",
+        "SCHEMAORG_PERSON" => #STARTUP_SCHEMA_ORG_PERSON_ACTIVE#,
     ),
     false
 );?>
@@ -150,6 +151,7 @@ $persons_code = '
         "SLIDER_ABOUT_TITLE" => "#SLIDER_ABOUT_TEAM_TITLE#",
         "PADDING_TOP" => "N",
         "TITLE_TYPE" => "p",
+        "SCHEMAORG_PERSON" => #STARTUP_SCHEMA_ORG_PERSON_ACTIVE#,
     ),
     false
 );?>

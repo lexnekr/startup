@@ -28,6 +28,11 @@ $arTemplateParameters = array(
         "TYPE" => "CHECKBOX",
         "DEFAULT" => "N",
     ),
+    "SCHEMAORG_PERSON" => Array(
+        "NAME" => GetMessage("SCHEMAORG_PERSON"),
+        "TYPE" => "CHECKBOX",
+        "DEFAULT" => "Y",
+    ),
 
 );
 ?>

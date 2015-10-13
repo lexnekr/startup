@@ -8,4 +8,5 @@ $MESS ["Type2"] = "H2";
 $MESS ["Type3"] = "H3";
 $MESS ["Type0"] = "Не заголовок";
 $MESS ['TITLE_TYPE'] = "Тип заголовка";
+$MESS ['SCHEMAORG_PERSON'] = "Использовать микроразметку Schema.org персон";
 ?>

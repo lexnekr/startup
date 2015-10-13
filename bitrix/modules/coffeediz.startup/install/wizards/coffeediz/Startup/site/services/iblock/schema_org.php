@@ -11,20 +11,26 @@ $SchemaOrgAdress_code = GetMessage("STARTUP_SCHEMA_ORG_ADRESS");
 
 $SchemaOrg = $wizard->GetVar("wiz_SchemaOrg_settings_checkbox");
 $SchemaOrgBreadcrumb = $wizard->GetVar("wiz_SchemaOrgBreadcrumb_settings_checkbox");
+$SchemaOrgPerson = $wizard->GetVar("wiz_SchemaOrgPerson_settings_checkbox");
 if ($SchemaOrg == "Y") {
     $SchemaOrgActive = "Y";
     if ($SchemaOrgBreadcrumb == "Y") {
         $SchemaOrgActiveBreadcrumb = "Y";
     }
     else {$SchemaOrgActiveBreadcrumb = "N";}
+    if ($SchemaOrgPerson == "Y") {
+        $SchemaOrgActivePerson = "Y";
+    }
+    else {$SchemaOrgActivePerson = "N";}
 }
 else {
     $SchemaOrgActive = "N";
     $SchemaOrgActiveBreadcrumb = "N";
+    $SchemaOrgActivePerson = "N";
 }
 
 $wiz_SchemaOrgAdress_settings_LOGO = $wizard->GetVar("wiz_SchemaOrgAdress_settings_LOGO");
-if($siteSlideImg2>0)
+if($wiz_SchemaOrgAdress_settings_LOGO>0)
 {
     $ff = CFile::GetByID($wiz_SchemaOrgAdress_settings_LOGO);
     if($zr = $ff->Fetch())
@@ -61,8 +67,14 @@ CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/sect_footer.php", array(
 $PageView = $wizard->GetVar("PageView");
 
 if ($PageView == "longread") {
+    CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/_index.php", array(
+        "STARTUP_SCHEMA_ORG_PERSON_ACTIVE" => $SchemaOrgActivePerson,
+    ));
 }
 elseif ($PageView == "pages") {
-}
+    CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."about/index.php", array(
+        "STARTUP_SCHEMA_ORG_PERSON_ACTIVE" => $SchemaOrgActivePerson,
+    ));
+    }
 
 ?>

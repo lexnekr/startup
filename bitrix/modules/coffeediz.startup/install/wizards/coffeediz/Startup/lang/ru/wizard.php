@@ -69,6 +69,7 @@ $MESS["wiz_SchemaOrgAdress_settings_TYPE_default_GovernmentOrganization"] = "Гос
 $MESS["wiz_SchemaOrgAdress_settings_TYPE_default_NGO"] = "Некоммерческая организация";
 $MESS["wiz_SchemaOrgAdress_settings_TYPE_default_SportsOrganization"] = "Спортивная организация";
 $MESS["wiz_SchemaOrgBreadcrumb_settings_edit"] = "Использовать хлебные крошки";
+$MESS["wiz_SchemaOrgPerson_settings_edit"] = "Использовать разметку Персон";
 $MESS["wiz_license_error"] = "Вы не приняли лицензионное соглашение";
 $MESS["wiz_license_mess"] = "принимаю";
 $MESS[""] = "";

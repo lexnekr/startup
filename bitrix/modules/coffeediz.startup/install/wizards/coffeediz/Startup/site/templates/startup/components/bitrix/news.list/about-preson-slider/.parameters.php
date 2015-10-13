@@ -19,6 +19,11 @@ $arTemplateParameters = array(
         "TYPE" => "STRING",
         "DEFAULT" => "/local/templates/startup/components/bitrix/news.list/about-preson-slider/img/bg-1.jpg",
     ),
+    "SCHEMAORG_PERSON" => Array(
+        "NAME" => GetMessage("SCHEMAORG_PERSON"),
+        "TYPE" => "CHECKBOX",
+        "DEFAULT" => "Y",
+    ),
 
 );
 ?>

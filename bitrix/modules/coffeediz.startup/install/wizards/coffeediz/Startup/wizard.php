@@ -230,6 +230,7 @@ class SchemaOrgStep extends CWizardStep
                 "wiz_SchemaOrgAdress_settings_DESCRIPTION" => GetMessage("wiz_SchemaOrgAdress_settings_DESCRIPTION_Default"),
                 "wiz_SchemaOrgAdress_settings_LOGO" => $wiz_SchemaOrgAdress_settings_LOGO,
                 "wiz_SchemaOrgBreadcrumb_settings_checkbox" => "Y",
+                "wiz_SchemaOrgPerson_settings_checkbox" => "Y",
 
                             )
         );
@@ -352,6 +353,11 @@ class SchemaOrgStep extends CWizardStep
             <tr>
                 <td>
                     '.$this->ShowCheckboxField("wiz_SchemaOrgBreadcrumb_settings_checkbox", "Y", Array("id" => "wiz_SchemaOrgBreadcrumb_settings_checkbox")).GetMessage("wiz_SchemaOrgBreadcrumb_settings_edit").'
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    '.$this->ShowCheckboxField("wiz_SchemaOrgPerson_settings_checkbox", "Y", Array("id" => "wiz_SchemaOrgPerson_settings_checkbox")).GetMessage("wiz_SchemaOrgPerson_settings_edit").'
                 </td>
             </tr>
             <tr>
