@@ -52,7 +52,6 @@ CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/sect_footer.php", array(
     "EMAIL" => htmlspecialcharsbx($wizard->GetVar("wiz_SchemaOrgAdress_settings_EMAIL")),
     "FAX" => htmlspecialcharsbx($wizard->GetVar("wiz_SchemaOrgAdress_settings_FAX")),
     "LOCALITY" => htmlspecialcharsbx($wizard->GetVar("wiz_SchemaOrgAdress_settings_LOCALITY")),
-    "LOGO" => "/include/SchemaOrgLogo.png",
     "NAME" => htmlspecialcharsbx($wizard->GetVar("wiz_SchemaOrgAdress_settings_Name")),
     "PHONE" => htmlspecialcharsbx($wizard->GetVar("wiz_SchemaOrgAdress_settings_PHONE")),
     "POST_CODE" => htmlspecialcharsbx($wizard->GetVar("wiz_SchemaOrgAdress_settings_POST_CODE")),
