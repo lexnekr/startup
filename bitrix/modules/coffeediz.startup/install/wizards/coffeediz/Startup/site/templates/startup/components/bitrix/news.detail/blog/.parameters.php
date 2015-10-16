@@ -29,7 +29,26 @@ $arTemplateParameters = array(
 		"VALUE" => "Y",
 		"DEFAULT" =>"N",
 		"REFRESH"=> "Y",
-	),	
+	),
+	"AUTHOR_TITLE" => Array(
+		"NAME" => GetMessage("AUTHOR_TITLE"),
+		"TYPE" => "STRING",
+		"MULTIPLE" => "N",
+		"DEFAULT"=> GetMessage("AUTHOR_DEFAULT"),
+	),
+	"OTHER_ARTICLES_TITLE" => Array(
+		"NAME" => GetMessage("OTHER_ARTICLES_TITLE"),
+		"TYPE" => "STRING",
+		"MULTIPLE" => "N",
+		"DEFAULT"=> GetMessage("OTHER_ARTICLES_DEFAULT"),
+	),
+	"OTHER_NEWS_TITLE" => Array(
+		"NAME" => GetMessage("OTHER_NEWS_TITLE"),
+		"TYPE" => "STRING",
+		"MULTIPLE" => "N",
+		"DEFAULT"=> GetMessage("OTHER_NEWS_DEFAULT"),
+	),
+
 );
 
 if ($arCurrentValues["USE_SHARE"] == "Y")

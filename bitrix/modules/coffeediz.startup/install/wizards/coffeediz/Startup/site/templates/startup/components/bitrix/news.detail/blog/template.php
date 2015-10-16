@@ -1,20 +1,25 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);
 ?>
+
 <section id="services" <?if($arParams['DETAIL_PADDING_TOP'] == "Y"):?> style="padding-top: 67px;"<?endif;?>>
 	<div class="container">
 		<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
 			<h1 class="section-title wow fadeIn animated" data-wow-delay=".2s" style="visibility: visible;-webkit-animation-delay: .2s; -moz-animation-delay: .2s; animation-delay: .2s;"><?=$arResult["NAME"]?></h1>
 		<?endif;?>
 		<div class="row">
-			<div class="col-md-12 wow fadeInUp animated" style="visibility: visible;">
-				<div class="service-box">
+			<?if(!empty($arResult['PROPERTIES']['HEAD_SIDEBAR']['~VALUE'])):?>
+				<div class="col-md-4" style="float: right;">
+					<?=$arResult['PROPERTIES']['HEAD_SIDEBAR']['~VALUE']['TEXT'];?>
+				</div>
+			<?endif;?>
+			<div class="col-md-<?if(empty($arResult['OTHER_ARTICLES']) & empty($arResult['PROPERTIES']['HEAD_SIDEBAR']['~VALUE']) & empty($arResult['OTHER_NEWS']) & empty($arResult['PROPERTIES']['FOOTER_SIDEBAR']['~VALUE']) & empty($arResult['AUTHOR']['NAME'])):?>12<?else:?>8<?endif;?> wow fadeInUp animated" style="float: left; visibility: visible;">
+				<div class="service-box service-box-content">
 					<div class="content" style="text-align: left;">
 						<div class="icon-wrapper">
 						<i class="fa fa-newspaper-o"></i>
 						</div>
 <br>
-
 	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
 		<div style="text-align: center;" class="col-md-12">
 		<img
@@ -107,6 +112,79 @@ $this->setFrameMode(true);
 					</div>
 				</div>
 			</div>
+
+
+
+			<?if(!empty($arResult['OTHER_ARTICLES'])):?>
+				<div class="col-xs-12 col-md-4 wow fadeInUp animated" style="padding-top: 30px;float: left; visibility: visible;">
+					<div class="service-box">
+						<div class="content" style="text-align: left;">
+							<div class="icon-wrapper">
+								<i class="fa fa-link"></i>
+							</div>
+							<h3 data-wow-delay=".2s"><?if(!empty($arParams['OTHER_ARTICLES_TITLE'])):?><?=$arParams['OTHER_ARTICLES_TITLE'];?><?else:?><?=GetMessage("OTHER_ARTICLES");?><?endif;?></h3>
+							<ul>
+								<?foreach($arResult['OTHER_ARTICLES'] as $pid=>$arOther_News):?>
+									<li><i class="fa fa-book"></i> <a href="<?=$arOther_News['DETAIL_PAGE_URL'];?>"><?=$arOther_News['NAME'];?></a></li>
+								<?endforeach;?>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<?endif;?>
+			
+			<?if(!empty($arResult['PROPERTIES']['FOOTER_SIDEBAR']['~VALUE'])):?>
+				<div class="col-md-4">
+					<?=$arResult['PROPERTIES']['FOOTER_SIDEBAR']['~VALUE']['TEXT'];?>
+				</div>
+			<?endif;?>
+			
+			<?if(!empty($arResult['OTHER_NEWS'])):?>
+				<div class="col-xs-12 col-md-4 wow fadeInUp animated" style="padding-top: 30px;float: left; visibility: visible;">
+					<div class="service-box">
+						<div class="content" style="text-align: left;">
+							<div class="icon-wrapper">
+								<i class="fa fa-link"></i>
+							</div>
+							<h3 data-wow-delay=".2s"><?if(!empty($arParams['OTHER_NEWS_TITLE'])):?><?=$arParams['OTHER_NEWS_TITLE'];?><?else:?><?=GetMessage("OTHER_NEWS");?><?endif;?></h3>
+							<ul>
+								<?foreach($arResult['OTHER_NEWS'] as $pid=>$arOther_News):?>
+									<li><i class="fa fa-arrow-right"></i> <a href="<?=$arOther_News['DETAIL_PAGE_URL'];?>"><?=$arOther_News['NAME'];?></a></li>
+								<?endforeach;?>
+							</ul>
+						</div>
+					</div>
+				</div>
+			<?endif;?>
+			
+			<?if(!empty($arResult['AUTHOR']['NAME'])):?>
+				<div class="col-xs-12 col-md-4 wow fadeInUp animated" style="padding-top: 30px;float: left; visibility: visible;">
+					<div class="service-box">
+						<div class="content" style="text-align: left;">
+							<div class="icon-wrapper">
+								<i class="fa fa-user"></i>
+							</div>
+							<h3 data-wow-delay=".2s"><?if(!empty($arParams['AUTHOR_TITLE'])):?><?=$arParams['AUTHOR_TITLE'];?><?else:?><?=GetMessage("AUTHOR");?><?endif;?></h3>
+							<?if(!empty($arResult['AUTHOR']["DETAIL_PICTURE"])):?>
+								<img class="img-responsive" src="<?=$arResult['AUTHOR']["DETAIL_PICTURE"]["SRC"]?>" title="<?=$arResult['AUTHOR']["DETAIL_PICTURE"]["TITLE"]?>" alt="<?=$arResult['AUTHOR']["DETAIL_PICTURE"]["TITLE"]?>">
+							<?elseif(!empty($arResult['AUTHOR']["PREVIEW_PICTURE"])):?>
+								<img class="img-responsive" src="<?=$arResult['AUTHOR']["PREVIEW_PICTURE"]["SRC"]?>" title="<?=$arResult['AUTHOR']["PREVIEW_PICTURE"]["TITLE"]?>" alt="<?=$arResult['AUTHOR']["PREVIEW_PICTURE"]["TITLE"]?>">
+							<?endif;?>
+							<h3><?=$arResult['AUTHOR']['NAME']?></h3>
+							<?if(!empty($arResult['AUTHOR']['PROPERTIES']['POSITION']['VALUE'])):?>
+										<p><b><?=$arResult['AUTHOR']['PROPERTIES']['POSITION']['VALUE']?></b></p>
+							<?endif;?>
+							<p><?=$arResult['AUTHOR']['PREVIEW_TEXT']?></p>
+						</div>
+					</div>
+				</div>
+			<?endif;?>
+
+
+
+
+
+
 		</div>
 	</div>
 </section>

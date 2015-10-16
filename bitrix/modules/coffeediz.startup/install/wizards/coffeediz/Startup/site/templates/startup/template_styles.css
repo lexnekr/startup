@@ -2,3 +2,15 @@
 {
  z-index: 990;
 }
+
+.service-box-content .content ul {
+    padding: 20px;
+}
+
+.service-box-content .content li {
+    list-style: disc;
+}
+
+.service-box .content a {
+    color: white;
+}

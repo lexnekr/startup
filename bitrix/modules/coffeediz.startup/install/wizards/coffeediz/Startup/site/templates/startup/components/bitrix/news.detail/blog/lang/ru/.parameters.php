@@ -9,4 +9,22 @@ $MESS["T_IBLOCK_DESC_NEWS_SHARE_TEMPLATE"] = "Шаблон компонента панели соц. закл
 $MESS["T_IBLOCK_DESC_NEWS_SHARE_SYSTEM"] = "Используемые соц. закладки и сети";
 $MESS["T_IBLOCK_DESC_NEWS_SHARE_SHORTEN_URL_LOGIN"] = "Логин для bit.ly";
 $MESS["T_IBLOCK_DESC_NEWS_SHARE_SHORTEN_URL_KEY"] = "Ключ для для bit.ly";
+$MESS["AUTHOR_TITLE"] = "Заголовок блока Автор";
+$MESS["AUTHOR_DEFAULT"] = "Автор";
+$MESS["OTHER_NEWS_TITLE"] = "Заголовок блока Другие новости";
+$MESS["OTHER_ARTICLES_TITLE"] = "Заголовок блока Материалы по теме";
+$MESS["OTHER_NEWS_DEFAULT"] = "Другие новости:";
+$MESS["OTHER_ARTICLES_DEFAULT"] = "Материалы по теме:";
+$MESS[""] = "";
+$MESS[""] = "";
+$MESS[""] = "";
+$MESS[""] = "";
+$MESS[""] = "";
+$MESS[""] = "";
+$MESS[""] = "";
+$MESS[""] = "";
+$MESS[""] = "";
+$MESS[""] = "";
+
+
 ?>

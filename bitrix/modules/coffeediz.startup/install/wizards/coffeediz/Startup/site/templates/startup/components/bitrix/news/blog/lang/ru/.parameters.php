@@ -8,4 +8,10 @@ $MESS ["Type2"] = "H2";
 $MESS ["Type3"] = "H3";
 $MESS ["Type0"] = "Не заголовок";
 $MESS ['TITLE_TYPE'] = "Тип заголовка";
+$MESS["AUTHOR_TITLE"] = "Заголовок блока Автор";
+$MESS["AUTHOR_DEFAULT"] = "Автор";
+$MESS["OTHER_NEWS_TITLE"] = "Заголовок блока Другие новости";
+$MESS["OTHER_ARTICLES_TITLE"] = "Заголовок блока Материалы по теме";
+$MESS["OTHER_NEWS_DEFAULT"] = "Другие новости:";
+$MESS["OTHER_ARTICLES_DEFAULT"] = "Материалы по теме:";
 ?>

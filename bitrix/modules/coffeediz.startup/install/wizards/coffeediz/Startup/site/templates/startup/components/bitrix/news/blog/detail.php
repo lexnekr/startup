@@ -62,6 +62,9 @@ $this->setFrameMode(true);
 		"SHARE_HANDLERS" => $arParams["SHARE_HANDLERS"],
 		"SHARE_SHORTEN_URL_LOGIN" => $arParams["SHARE_SHORTEN_URL_LOGIN"],
 		"SHARE_SHORTEN_URL_KEY" => $arParams["SHARE_SHORTEN_URL_KEY"],
+		"AUTHOR_TITLE" => $arParams["AUTHOR_TITLE"],
+		"OTHER_ARTICLES_TITLE" => $arParams["OTHER_ARTICLES_TITLE"],
+		"OTHER_NEWS_TITLE" => $arParams["OTHER_NEWS_TITLE"],
 		"ADD_ELEMENT_CHAIN" => (isset($arParams["ADD_ELEMENT_CHAIN"]) ? $arParams["ADD_ELEMENT_CHAIN"] : '')
 	),
 	$component
