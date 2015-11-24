@@ -8,27 +8,27 @@ $showRightsTab = true;
 //$arSel = array('REFERENCE_ID' => array(1, 3, 5, 7), 'REFERENCE' => array('Значение 1', 'Значение 2', 'Значение 3', 'Значение 4'));
 
 $arTabs = array(
-   array(
-      'DIV' => 'edit1',
-      'TAB' => GetMessage("TAB_1_NAME"),
-      'ICON' => '',
-      'TITLE' => GetMessage("TAB_1_NAME")
-   )
+    array(
+        'DIV' => 'edit1',
+        'TAB' => GetMessage("TAB_1_NAME"),
+        'ICON' => '',
+        'TITLE' => GetMessage("TAB_1_NAME")
+    )
 );
 
 $arGroups = array(
-	'MAIN' => array('TITLE' => GetMessage("TAB_1_NAME"), 'TAB' => 0)
+    'MAIN' => array('TITLE' => GetMessage("TAB_1_NAME"), 'TAB' => 0)
 );
 
 $arOptions = array(
-	'TEST_0' => array(
-		'GROUP' => 'MAIN',
-		'TITLE' => GetMessage("MAIN_LICENSE"),
-		'TYPE' => 'STRING',
-		'DEFAULT' => 'FREE',
-		'SORT' => '0',
-		'NOTES' => GetMessage("MAIN_LICENSE_TEXT")
-	)
+    'LICENSE' => array(
+        'GROUP' => 'MAIN',
+        'TITLE' => GetMessage("MAIN_LICENSE"),
+        'TYPE' => 'STRING',
+        'DEFAULT' => 'FREE',
+        'SORT' => '0',
+        'NOTES' => GetMessage("MAIN_LICENSE_TEXT")
+    )
 );
 
 /*

@@ -67,6 +67,7 @@ Class coffeediz_startup extends CModule
     {
         $this->InstallDB();
         $this->InstallFiles();
+        COption::SetOptionString("coffeediz.startup","LICENSE","FREE");
     }
     function DoUninstall()
     {
