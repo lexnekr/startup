@@ -27,6 +27,8 @@ IncludeTemplateLangFile(__FILE__);
     <a href="#header"><i class="fa fa-angle-up"></i></a>
 </div>
 <!-- Scroll End -->
-
+<?CModule::IncludeModule('coffeediz.startup'); 
+$Lic = new CoffeeStartupLicense();
+$LicType = $Lic->CopyRight();?>
 </body>
 </html>

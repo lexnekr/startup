@@ -11,4 +11,12 @@
     array('HIDE_ICONS' => 'Y')
 );?>
 
-#siteCopyright#
+<?$APPLICATION->IncludeComponent(
+	"coffeediz:copyright", 
+	"startup", 
+	array(
+		"COMPONENT_TEMPLATE" => "startup",
+		"COPYRIGHT" => "FREE"
+	),
+	false
+);?>

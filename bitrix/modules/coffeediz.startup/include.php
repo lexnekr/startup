@@ -24,13 +24,14 @@ class CoffeeStartupLicense
 		$link = $APPLICATION->GetProperty("CopyRightLink");
 		$CopyRight = GetMessage("CopyRightLink");
 		if ($link == $CopyRight) {
-			$CopyRightError = true;
+			$CopyRightError = "1";
 		}
 		elseif ($this->Type() == "C") {
-			$CopyRightError = true;
+			$CopyRightError = "1";
 		}
 		else {
 			$CopyRightError = "ERROR";
+			echo GetMessage("CopyRightError");
 		}
 		return $CopyRightError;
 	}
