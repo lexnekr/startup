@@ -10,7 +10,7 @@ $MESS["MAIN_LICENSE_TEXT"] = '
 </ol>
 ';
 $MESS["TAB_1_NAME"] = "Настройки";
-$MESS[""] = "";
+$MESS["MAIN_LICENSE_BUY"] = "Купить Расширенную Лицензию";
 $MESS[""] = "";
 $MESS[""] = "";
 $MESS[""] = "";

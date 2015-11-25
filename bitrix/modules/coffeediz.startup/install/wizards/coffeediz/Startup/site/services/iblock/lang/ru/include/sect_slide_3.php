@@ -37,7 +37,7 @@
                         4 => "",
                     ),
                     "BUTTON_TEXT" => "Заказать",
-                    "BUTTON_URL" => "mailto:a@coffeediz.ru",
+                    "BUTTON_URL" => "mailto:a@coffeediz.ru?subject=Доработка",
                     "BLOCK_MD" => "4",
                     "BLOCK_SM" => "4",
                     "PRICE" => "20€"
@@ -51,14 +51,14 @@
                     "COMPONENT_TEMPLATE" => "pricing",
                     "TITLE" => "Спонсоркий пакет",
                     "STRING" => array(
-                        0 => "Установка",
+                        0 => "Установка \"под ключ\"",
                         1 => "Замена контента",
                         2 => "Приоритет в работе",
-                        3 => "Доработка \"под ключ\"",
+                        3 => "Удаление копирайта",
                         4 => "",
                     ),
                     "BUTTON_TEXT" => "Заказать",
-                    "BUTTON_URL" => "mailto:a@coffeediz.ru",
+                    "BUTTON_URL" => "mailto:a@coffeediz.ru?subject=Спонсорский_Пакет",
                     "BLOCK_MD" => "4",
                     "BLOCK_SM" => "4",
                     "PRICE" => "5000р"

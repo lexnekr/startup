@@ -27,7 +27,7 @@ $arOptions = array(
         'TYPE' => 'STRING',
         'DEFAULT' => 'FREE',
         'SORT' => '0',
-        'NOTES' => GetMessage("MAIN_LICENSE_TEXT")
+        'NOTES' => GetMessage("MAIN_LICENSE_TEXT").'<br/><a href="http://xn--80ahcjeib4ac4d.xn--p1ai/solutions/php/startup/?LICENSE='.md5("BITRIX".LICENSE_KEY."LICENCE").'">'.GetMessage("MAIN_LICENSE_BUY").'</a>'
     )
 );
 

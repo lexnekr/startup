@@ -6,7 +6,6 @@ IncludeTemplateLangFile(__FILE__);
 <!doctype html>
 <html lang="<?=LANGUAGE_ID;?>-<?=strtoupper(LANGUAGE_ID);?>">
 <head>
-    <meta charset="UTF-8">
     <title><?$APPLICATION->ShowTitle()?></title>
     <?
     $APPLICATION->ShowHead();

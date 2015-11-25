@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="windows-1251"?>
-<КоммерческаяИнформация ВерсияСхемы="2.021" ДатаФормирования="2015-10-21T10:01:05">
+<КоммерческаяИнформация ВерсияСхемы="2.021" ДатаФормирования="2015-11-25T18:03:50">
 	<Классификатор>
 		<Ид>STARTUP_BLOG_s1</Ид>
-		<Наименование>[s1] Блог</Наименование>
+		<Наименование>[s1] [s1] Блог</Наименование>
 		<Свойства>
 			<Свойство>
 				<Ид>CML2_ACTIVE</Ид>
@@ -252,7 +252,7 @@
 	<Каталог>
 		<Ид>STARTUP_BLOG_s1</Ид>
 		<ИдКлассификатора>STARTUP_BLOG_s1</ИдКлассификатора>
-		<Наименование>[s1] Блог</Наименование>
+		<Наименование>[s1] [s1] Блог</Наименование>
 		<БитриксКод>STARTUP_BLOG_s1</БитриксКод>
 		<БитриксСортировка>500</БитриксСортировка>
 		<БитриксURLСписок>#SITE_DIR#/blog/</БитриксURLСписок>
@@ -308,11 +308,11 @@
 		<Товары>
 			<Товар>
 				<Ид>25</Ид>
-				<Наименование>Blog Post With Slide</Наименование>
+				<Наименование>4 цвета - 1 решение</Наименование>
 				<БитриксТеги></БитриксТеги>
 				<Группы>
 				</Группы>
-				<Картинка>4_blog_files/iblock/87b/87b26f2058768cf722d5f6c1c73f1233.jpg</Картинка>
+				<Картинка></Картинка>
 				<ЗначенияСвойств>
 					<ЗначенияСвойства>
 						<Ид>CML2_ACTIVE</Ид>
@@ -320,7 +320,7 @@
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_CODE</Ид>
-						<Значение>blog-post-with-slide</Значение>
+						<Значение>4-colors</Значение>
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_SORT</Ид>
@@ -336,17 +336,291 @@
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_PREVIEW_TEXT</Ид>
-						<Значение>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</Значение>
+						<Значение>Типовое решение поддерживает 4 базовых цвета, которые можно переключать с помощью простого компонента, уже встроенного в шаблон. Вы в любой момент можете изменить свой стиль и для этого не нужно быть программистом.</Значение>
 						<Тип>text</Тип>
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_DETAIL_TEXT</Ид>
-						<Значение></Значение>
-						<Тип>text</Тип>
+						<Значение>&lt;p&gt;
+	 Типовое решение STARTUP разработано на базе Bootstrap 3 шаблона STARTUP от команды Graygrids и распространяется бесплатно.
+&lt;/p&gt;
+&lt;p&gt;
+	 Решение поставляется с 4 цветовыми схемами:
+&lt;/p&gt;
+&lt;div class=&quot;col-sm-3 col-xs-6&quot;&gt;
+ &lt;a href=&quot;/bitrix/wizards/coffeediz/Startup/images/ColorTheme/default.jpg&quot; title=&quot;тема &amp;quot;по-умолчанию&amp;quot;&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/bitrix/wizards/coffeediz/Startup/images/ColorTheme/default.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-sm-3 col-xs-6&quot;&gt;
+ &lt;a href=&quot;/bitrix/wizards/coffeediz/Startup/images/ColorTheme/default.jpg&quot; title=&quot;светло-синяя тема&quot; target=&quot;_blank&quot;&gt; &lt;img src=&quot;/bitrix/wizards/coffeediz/Startup/images/ColorTheme/blue.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-sm-3 col-xs-6&quot;&gt;
+ &lt;a href=&quot;/bitrix/wizards/coffeediz/Startup/images/ColorTheme/default.jpg&quot; title=&quot;Красная тема&quot; target=&quot;_blank&quot;&gt; &lt;img src=&quot;/bitrix/wizards/coffeediz/Startup/images/ColorTheme/red.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;col-sm-3 col-xs-6&quot;&gt;
+ &lt;a href=&quot;/bitrix/wizards/coffeediz/Startup/images/ColorTheme/default.jpg&quot; title=&quot;Тёмно-синяя тема&quot; target=&quot;_blank&quot;&gt; &lt;img src=&quot;/bitrix/wizards/coffeediz/Startup/images/ColorTheme/mblue.jpg&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;
+	 Возможен как выбор цветовой схемы при установке, так и последующая её безболезненная смена в процессе эксплуатации с помощью изменения 1 параметра компонента &quot;coffeediz:css-preset (Цветовая схема Шаблона)&quot;
+&lt;/p&gt;
+&lt;p&gt;
+	 Решение поддерживает 2 основных типа компоновки контента:
+&lt;/p&gt;
+&lt;div class=&quot;col-xs-12&quot;&gt;
+	&lt;div class=&quot;col-sm-3&quot;&gt;
+ &lt;b&gt;Лендинг&lt;/b&gt; &lt;a href=&quot;/bitrix/wizards/coffeediz/Startup/images/ru/longread.png&quot; title=&quot;лендинг&quot; target=&quot;_blank&quot;&gt; &lt;img src=&quot;/bitrix/wizards/coffeediz/Startup/images/ru/longread.png&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;col-sm-9&quot;&gt;
+ &lt;b&gt;Набор страниц (обычный сайт)&lt;/b&gt; &lt;a href=&quot;/bitrix/wizards/coffeediz/Startup/images/ru/pages.png&quot; title=&quot;набор страниц (обычный сайт)&quot; target=&quot;_blank&quot;&gt; &lt;img src=&quot;/bitrix/wizards/coffeediz/Startup/images/ru/pages.png&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+	 Решение построено на базе полноценного Bootstrap 3 без кастомизации, поэтому вы можете использовать все возможности адаптивной вёрстки Bootstrap и сетки для удобной компоновки информации (примеры такого использования вы можете увидеть в данной статье.
+&lt;/p&gt;
+&lt;div class=&quot;col-xs-12&quot;&gt;
+	&lt;div class=&quot;col-sm-2&quot;&gt;
+ &lt;img src=&quot;http://1c-bitrix.ru/upload/update/722/1.png&quot; class=&quot;img-responsive&quot; alt=&quot;&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;col-sm-10&quot;&gt;
+		&lt;p&gt;
+			 Типовое решение уже содержит 3 типа микроразметки Schema.org (Хлебные крошки, Персона, Адрес и контакты Организации)&amp;nbsp;и позволяет при установке как заменить часть данных, так и полностью отключить микроразметку определённого типа. Остальные типы микроразметки доступны в рамках устанавливающего решения &quot;Микроразметка Schema.Org&quot; и могут быть самостоятельно добавлены опытным пользователем.
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+	 Весь контент сайта может быть отредактирован и изменён. В случае потребности в реализации более сложных идей (например, изменении порядка следования блоков или реализации только 1 раздела, а не всего сайта в рамках данного шаблона) - вы всегда можете обратиться в нашу техническую поддержку по адресу &lt;a href=&quot;mailto:a@coffeediz.ru&quot;&gt;a@coffeediz.ru&lt;/a&gt;.
+&lt;/p&gt;</Значение>
+						<Тип>html</Тип>
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_PREVIEW_PICTURE</Ид>
-						<Значение>4_blog_files/iblock/1f0/1f0b0cdd719607f77f3226eab09570da.jpg</Значение>
+						<Значение>4_blog_files/iblock/b86/b86bd7aa726b5fa617b45d74bb1bea03.png</Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>14</Ид>
+						<Значение>4_blog_files/iblock/df5/df5c50ce04be9ed37c32115d953fe301.png</Значение>
+						<ЗначениеСвойства>
+							<Значение>4_blog_files/iblock/df5/df5c50ce04be9ed37c32115d953fe301.png</Значение>
+							<Описание></Описание>
+						</ЗначениеСвойства>
+						<Значение>4_blog_files/iblock/441/44154ca3136983659add78b061787bcb.png</Значение>
+						<ЗначениеСвойства>
+							<Значение>4_blog_files/iblock/441/44154ca3136983659add78b061787bcb.png</Значение>
+							<Описание></Описание>
+						</ЗначениеСвойства>
+						<Значение>4_blog_files/iblock/c33/c33c7943d980984c161944e3630187ed.png</Значение>
+						<ЗначениеСвойства>
+							<Значение>4_blog_files/iblock/c33/c33c7943d980984c161944e3630187ed.png</Значение>
+							<Описание></Описание>
+						</ЗначениеСвойства>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>75</Ид>
+						<Значение></Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>78</Ид>
+						<Значение></Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>77</Ид>
+						<Значение></Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>76</Ид>
+						<Значение></Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>15</Ид>
+						<Значение></Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>79</Ид>
+						<Значение></Значение>
+					</ЗначенияСвойства>
+				</ЗначенияСвойств>
+			</Товар>
+			<Товар>
+				<Ид>26</Ид>
+				<Наименование>Лицензионная политика</Наименование>
+				<БитриксТеги></БитриксТеги>
+				<Группы>
+				</Группы>
+				<Картинка>4_blog_files/iblock/ba2/ba27af81d69f63a1a75c130124449942.jpg</Картинка>
+				<ЗначенияСвойств>
+					<ЗначенияСвойства>
+						<Ид>CML2_ACTIVE</Ид>
+						<Значение>true</Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>CML2_CODE</Ид>
+						<Значение>license</Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>CML2_SORT</Ид>
+						<Значение>500</Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>CML2_ACTIVE_FROM</Ид>
+						<Значение></Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>CML2_ACTIVE_TO</Ид>
+						<Значение></Значение>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>CML2_PREVIEW_TEXT</Ид>
+						<Значение>В данной записи демонстрируется работа компонента новостей по выводу 1 картинки в слайдере и текста анонса, а так же списка связанных новостей, 2 баннеров и автора в детальном тексте новости. Вы можете настроить новость максимально гибко!</Значение>
+						<Тип>text</Тип>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>CML2_DETAIL_TEXT</Ид>
+						<Значение>&lt;p&gt;
+	 Решение STARTUP распространяется бесплатно при условии соблюдения лицензии:
+&lt;/p&gt;
+&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot; class=&quot;notes&quot;&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;top&quot;&gt;
+	&lt;td class=&quot;left&quot;&gt;
+		&lt;div class=&quot;empty&quot;&gt;
+		&lt;/div&gt;
+	&lt;/td&gt;
+	&lt;td&gt;
+		&lt;div class=&quot;empty&quot;&gt;
+		&lt;/div&gt;
+	&lt;/td&gt;
+	&lt;td class=&quot;right&quot;&gt;
+		&lt;div class=&quot;empty&quot;&gt;
+		&lt;/div&gt;
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+	&lt;td class=&quot;left&quot;&gt;
+		&lt;div class=&quot;empty&quot;&gt;
+		&lt;/div&gt;
+	&lt;/td&gt;
+	&lt;td class=&quot;content&quot;&gt;
+ &lt;b&gt;&lt;span style=&quot;font-size: 15pt;&quot;&gt;Лицензионное соглашение&lt;/span&gt;&lt;/b&gt;
+		&lt;ol style=&quot;text-align: left;&quot;&gt;
+			&lt;li&gt;Вы &lt;span style=&quot;color: #ff0000;&quot;&gt;&lt;b&gt;не можете&lt;/b&gt;&lt;/span&gt; удалять ссылку на авторов шаблона и решения без приобретения РАСШИРЕННОЙ ЛИЦЕНЗИИ.&lt;/li&gt;
+			&lt;li&gt;Вы &lt;span style=&quot;color: #339966;&quot;&gt;&lt;b&gt;можете&lt;/b&gt;&lt;/span&gt; использовать шаблон и решение в своих личных и коммерческих целях.&lt;/li&gt;
+			&lt;li&gt;Вы можете &lt;span style=&quot;color: #339966;&quot;&gt;&lt;b&gt;изменять&lt;/b&gt;&lt;/span&gt; шаблон и решение для себя и своих клиентов.&lt;/li&gt;
+			&lt;li&gt;Вы &lt;span style=&quot;color: #ff0000;&quot;&gt;&lt;b&gt;не можете&lt;/b&gt;&lt;/span&gt; перепродавать решение и шаблон третьим лицам.&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/td&gt;
+	&lt;td class=&quot;right&quot;&gt;
+		&lt;div class=&quot;empty&quot;&gt;
+		&lt;/div&gt;
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;bottom&quot;&gt;
+	&lt;td class=&quot;left&quot;&gt;
+		&lt;div class=&quot;empty&quot;&gt;
+		&lt;/div&gt;
+	&lt;/td&gt;
+	&lt;td&gt;
+		&lt;div class=&quot;empty&quot;&gt;
+		&lt;/div&gt;
+	&lt;/td&gt;
+	&lt;td class=&quot;right&quot;&gt;
+		&lt;div class=&quot;empty&quot;&gt;
+		&lt;/div&gt;
+	&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;
+	 Для использования решения без указания авторства дизайна Шаблона компании GrayGrids и интеграции с 1С-Битрикс Задойного А.В. возможно в рамках расширенной коммерческой лицензии.
+&lt;/p&gt;
+&lt;p&gt;
+ &lt;b&gt;&lt;span style=&quot;font-size: 15pt;&quot;&gt;Стоимость расширенной коммерческой лицензии*&lt;/span&gt;&lt;/b&gt;&lt;span style=&quot;font-size: 15pt;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;b&gt;&lt;span style=&quot;font-size: 15pt;&quot;&gt;5000р&lt;/span&gt;&lt;/b&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+Расширенная лицензия включает: &lt;/h2&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;
+	Помощь в установке решения на сайт под управлением 1С-Битрикс &lt;/li&gt;
+	&lt;li&gt;
+	Замена контента предоставленным заказчиком &lt;/li&gt;
+	&lt;li&gt;
+	Возможность указать в копирайте произвольную информацию &lt;/li&gt;
+	&lt;li&gt;Приоритет в приёме заявок на разработку нового функционала&lt;/li&gt;
+	&lt;li&gt;Лицензия Graygrid на шаблон Startup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+Правила лицензирования: &lt;/h2&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Устанавливая решение вы принимаете лицензионное соглашение, указанное выше&lt;/li&gt;
+	&lt;li&gt;
+	Лицензируется каждый ключ 1С-Битрикс отдельно: &lt;/li&gt;
+	&lt;ul&gt;
+		&lt;li&gt;
+		Все сайты на 1 ключе (многосайтовость) могут использовать решение в рамках 1 расширенной лицензии&lt;/li&gt;
+		&lt;li&gt;
+		Для использования решения в режиме расширенной лицензии на 2 и более лицензионных ключах 1С-Битрикс (разные сайты) необходимо приобретение соответствующего числа расширенных лицензий. &lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;li&gt;
+	Лицензия на решение STARTUP выписывается на конкретный актуальный ключ 1С-Битрикс** (&lt;i&gt;для генерации ключа потребуется передача ключа автору решения, либо предоставление доступа к сайту&lt;/i&gt;) &lt;/li&gt;
+	&lt;li&gt;Лицензируются только активные коммерческие и NFR ключи 1С-Битрикс (не лицензируются DEMO ключи)&lt;/li&gt;
+	&lt;li&gt;Ключ не может быть перевыпущен для другой лицензии 1С-Битрикс (необходимо повторное приобретение лицензии)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+ &lt;br&gt;
+&lt;/p&gt;
+&lt;h3&gt;Бесплатный лицензионный ключ&lt;/h3&gt;
+&lt;p&gt;
+ &lt;span style=&quot;color: #ff0000;&quot;&gt;&lt;b&gt;&lt;span style=&quot;font-size: 18pt;&quot;&gt;FREE&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;
+ &lt;br&gt;
+&lt;/p&gt;
+&lt;h3&gt;Как приобрести Расширенную Лицензию&lt;/h3&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;
+
+		На странице ваш_сайт.ру/bitrix/admin/settings.php?lang=ru&amp;amp;mid=coffeediz.startup перейдите по ссылке &quot;Купить Расширенную Лицензию&quot;&lt;br&gt;
+		&lt;img src=&quot;http://xn--80ahcjeib4ac4d.xn--p1ai/upload/medialibrary/f45/f4543291cdaf4cf58dbc97d3d430e386.PNG&quot; class=&quot;img-responsive&quot; title=&quot;Настройки лицензии решения STARTUP для 1С-Битрикс&quot;&gt;
+	
+	&lt;/li&gt;
+	&lt;li&gt;
+
+		 Заполнить форму (проверить правильность автоматически заполненных полей)
+
+	&lt;/li&gt;
+	&lt;li&gt;
+
+		Дождаться дальнейших инструкций автора решения
+
+	&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;/p&gt;
+&lt;p&gt;
+ &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;
+ &lt;br&gt;
+&lt;/p&gt;
+&lt;p&gt;
+ &lt;sub&gt;* - стоимость указана по состоянию на 25.11.2015 и может быть изменена в связи с изменение курса $ и другими факторами (в связи с тем, что лицензия включает сублицензирование у GrayGrids, оплачиваемое в долларах США)&lt;/sub&gt;
+&lt;/p&gt;
+&lt;p&gt;
+ &lt;sub&gt;** -&amp;nbsp;для генерации ключа потребуется передача ключа автору решения или адреса домена, привязанного к лицензионному ключу при регистрации,&amp;nbsp;либо предоставление доступа к сайту.&lt;/sub&gt;
+&lt;/p&gt;</Значение>
+						<Тип>html</Тип>
+					</ЗначенияСвойства>
+					<ЗначенияСвойства>
+						<Ид>CML2_PREVIEW_PICTURE</Ид>
+						<Значение>4_blog_files/iblock/cf0/cf0c4bf8d9406c13d4da7b1d67a6e73f.PNG</Значение>
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>14</Ид>
@@ -379,12 +653,12 @@
 				</ЗначенияСвойств>
 			</Товар>
 			<Товар>
-				<Ид>26</Ид>
+				<Ид>27</Ид>
 				<Наименование>Пример записи со слайдом</Наименование>
 				<БитриксТеги></БитриксТеги>
 				<Группы>
 				</Группы>
-				<Картинка>4_blog_files/iblock/bcf/bcfbc29d6d7b8104cdf2aba9178d3a8f.png</Картинка>
+				<Картинка>4_blog_files/iblock/343/343d259f67fb2126e7d9103fc14f82f3.png</Картинка>
 				<ЗначенияСвойств>
 					<ЗначенияСвойства>
 						<Ид>CML2_ACTIVE</Ид>
@@ -392,7 +666,7 @@
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_CODE</Ид>
-						<Значение>blog-post-with-slide-2</Значение>
+						<Значение>blog-post-with-slide</Значение>
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_SORT</Ид>
@@ -400,7 +674,7 @@
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_ACTIVE_FROM</Ид>
-						<Значение>2015-08-03 10:04:00</Значение>
+						<Значение></Значение>
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_ACTIVE_TO</Ид>
@@ -469,7 +743,7 @@
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_PREVIEW_PICTURE</Ид>
-						<Значение>4_blog_files/iblock/5b1/5b10e4427b7404c2fbb3d3e1d2eb7e79.png</Значение>
+						<Значение>4_blog_files/iblock/088/088e575180234c065c33c5172e7f8c58.png</Значение>
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>14</Ид>
@@ -486,11 +760,6 @@
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>78</Ид>
-						<Значение>28</Значение>
-						<ЗначениеСвойства>
-							<Значение>28</Значение>
-							<Описание></Описание>
-						</ЗначениеСвойства>
 						<Значение>25</Значение>
 						<ЗначениеСвойства>
 							<Значение>25</Значение>
@@ -517,11 +786,6 @@
 							<Значение>26</Значение>
 							<Описание></Описание>
 						</ЗначениеСвойства>
-						<Значение>27</Значение>
-						<ЗначениеСвойства>
-							<Значение>27</Значение>
-							<Описание></Описание>
-						</ЗначениеСвойства>
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>15</Ид>
@@ -534,87 +798,6 @@
 							<Значение>1</Значение>
 							<Описание></Описание>
 						</ЗначениеСвойства>
-					</ЗначенияСвойства>
-				</ЗначенияСвойств>
-			</Товар>
-			<Товар>
-				<Ид>27</Ид>
-				<Наименование>Blog Post With Slide 3</Наименование>
-				<БитриксТеги></БитриксТеги>
-				<Группы>
-				</Группы>
-				<Картинка></Картинка>
-				<ЗначенияСвойств>
-					<ЗначенияСвойства>
-						<Ид>CML2_ACTIVE</Ид>
-						<Значение>true</Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>CML2_CODE</Ид>
-						<Значение>blog-post-with-slide-3</Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>CML2_SORT</Ид>
-						<Значение>500</Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>CML2_ACTIVE_FROM</Ид>
-						<Значение></Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>CML2_ACTIVE_TO</Ид>
-						<Значение></Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>CML2_PREVIEW_TEXT</Ид>
-						<Значение>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived.</Значение>
-						<Тип>text</Тип>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>CML2_DETAIL_TEXT</Ид>
-						<Значение></Значение>
-						<Тип>text</Тип>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>CML2_PREVIEW_PICTURE</Ид>
-						<Значение>4_blog_files/iblock/afb/afbc935d49311cf479ce694f38b06c2c.jpg</Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>14</Ид>
-						<Значение>4_blog_files/iblock/546/5469acb9d84c3bb44a97c3016619369e.jpg</Значение>
-						<ЗначениеСвойства>
-							<Значение>4_blog_files/iblock/546/5469acb9d84c3bb44a97c3016619369e.jpg</Значение>
-							<Описание></Описание>
-						</ЗначениеСвойства>
-						<Значение>4_blog_files/iblock/b65/b656a74e19efcfe2478feda0d153a36d.jpg</Значение>
-						<ЗначениеСвойства>
-							<Значение>4_blog_files/iblock/b65/b656a74e19efcfe2478feda0d153a36d.jpg</Значение>
-							<Описание></Описание>
-						</ЗначениеСвойства>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>75</Ид>
-						<Значение></Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>78</Ид>
-						<Значение></Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>77</Ид>
-						<Значение></Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>76</Ид>
-						<Значение></Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>15</Ид>
-						<Значение></Значение>
-					</ЗначенияСвойства>
-					<ЗначенияСвойства>
-						<Ид>79</Ид>
-						<Значение></Значение>
 					</ЗначенияСвойства>
 				</ЗначенияСвойств>
 			</Товар>
@@ -658,7 +841,7 @@
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>CML2_PREVIEW_PICTURE</Ид>
-						<Значение>4_blog_files/iblock/42e/42e51c68fea5a5b55ebc916be6b6bf00.jpg</Значение>
+						<Значение>4_blog_files/iblock/a2a/a2abeb86eccde57439c6f106f0d5911c.jpg</Значение>
 					</ЗначенияСвойства>
 					<ЗначенияСвойства>
 						<Ид>14</Ид>
