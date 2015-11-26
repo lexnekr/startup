@@ -58,9 +58,9 @@ class CModuleOptions
 		if($need_access_tab)
 			$this->arTabs[] = array(
 				'DIV' => 'edit_access_tab',
-				'TAB' => 'Права доступа',
+				'TAB' => GetMessage("Rights"),
 				'ICON' => '',
-				'TITLE' => 'Настройка прав доступа'
+				'TITLE' => GetMessage("RightsSettings")
 			);
 		
 		if($_REQUEST['update'] == 'Y' && check_bitrix_sessid())
@@ -277,8 +277,8 @@ class CModuleOptions
 			$tabControl->Buttons();
 			
 			echo 	'<input type="hidden" name="update" value="Y" />
-					<input type="submit" name="save" value="Сохранить" />
-					<input type="reset" name="reset" value="Отменить" />
+					<input type="submit" name="save" value='.GetMessage("Save").' />
+					<input type="reset" name="reset" value='.GetMessage("Cancel").' />
 					</form>';
 
 			$tabControl->End();
