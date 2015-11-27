@@ -12,14 +12,21 @@ elseif ($T == "F") {
  $COPYRIGHT_value = Array("FREE" => GetMessage("COPYRIGHT_FREE"));
 }
 elseif ($T == "C") {
- $COPYRIGHT_name = GetMessage("COPYRIGHT_name");
- $COPYRIGHT_value = Array(
-	"FREE" => GetMessage("COPYRIGHT_FREE"),
-	"COFFEE" => GetMessage("COPYRIGHT_COFFEE"),
-	"GRAYGRIDS" => GetMessage("COPYRIGHT_GRAYGRIDS"),
-	"NONE" => GetMessage("COPYRIGHT_NONE"),
-	"CUSTOME" => GetMessage("COPYRIGHT_CUSTOME"),
- );
+    $COPYRIGHT_name = GetMessage("COPYRIGHT_name");
+    $COPYRIGHT_value = Array(
+        "FREE" => GetMessage("COPYRIGHT_FREE"),
+        "COFFEE" => GetMessage("COPYRIGHT_COFFEE"),
+        "GRAYGRIDS" => GetMessage("COPYRIGHT_GRAYGRIDS"),
+        "NONE" => GetMessage("COPYRIGHT_NONE"),
+        "CUSTOME" => GetMessage("COPYRIGHT_CUSTOME"),
+    );
+}
+elseif ($T == "L") {
+        $COPYRIGHT_name = GetMessage("COPYRIGHT_name");
+        $COPYRIGHT_value = Array(
+            "FREE" => GetMessage("COPYRIGHT_FREE"),
+            "GRAYGRIDS" => GetMessage("COPYRIGHT_GRAYGRIDS"),
+        );
 }
 
 $arComponentParameters = array(

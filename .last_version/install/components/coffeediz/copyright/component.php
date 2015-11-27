@@ -8,20 +8,30 @@ $LicType = $Lic->Type();
 
 
 if ($LicType == "C") {
-	switch($arParams["COPYRIGHT"]){
-		case "FREE":	$COPYRIGHT = GetMessage("COPYRIGHT_FREE");
-		break;
-		case "COFFEE":	$COPYRIGHT = GetMessage("COPYRIGHT_COFFEE");
-		break;
-		case "GRAYGRIDS":	$COPYRIGHT = GetMessage("COPYRIGHT_GRAYGRIDS");
-		break;
-		case "NONE":	$COPYRIGHT = "";
-		break;
-		case "CUSTOME":	$COPYRIGHT = $arParams["~CUSTOME_COPYRIGHT"];
-		break;
-	
-		default:		$COPYRIGHT = GetMessage("COPYRIGHT_FREE");
-	}
+    switch($arParams["COPYRIGHT"]){
+        case "FREE":	$COPYRIGHT = GetMessage("COPYRIGHT_FREE");
+            break;
+        case "COFFEE":	$COPYRIGHT = GetMessage("COPYRIGHT_COFFEE");
+            break;
+        case "GRAYGRIDS":	$COPYRIGHT = GetMessage("COPYRIGHT_GRAYGRIDS");
+            break;
+        case "NONE":	$COPYRIGHT = "";
+            break;
+        case "CUSTOME":	$COPYRIGHT = $arParams["~CUSTOME_COPYRIGHT"];
+            break;
+
+        default:		$COPYRIGHT = GetMessage("COPYRIGHT_FREE");
+    }
+}
+elseif ($LicType == "L") {
+    switch($arParams["COPYRIGHT"]){
+        case "FREE":	$COPYRIGHT = GetMessage("COPYRIGHT_FREE");
+            break;
+        case "GRAYGRIDS":	$COPYRIGHT = GetMessage("COPYRIGHT_GRAYGRIDS");
+            break;
+
+        default:		$COPYRIGHT = GetMessage("COPYRIGHT_FREE");
+    }
 }
 elseif ($LicType == "F"){
 	$COPYRIGHT = GetMessage("COPYRIGHT_FREE");

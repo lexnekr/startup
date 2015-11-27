@@ -7,10 +7,14 @@ class CoffeeStartupLicense
 	public function Type() {
 		$ModuleKey = COption::GetOptionString("coffeediz.startup", "LICENSE", "Default");
 		$MatrixKey = "COFFEE-ST-".substr(strtoupper(md5("STARTUP".md5("BITRIX".LICENSE_KEY."LICENCE"))),0,8);
+        $MatrixKey2 = "COFFEE-ST-".substr(strtoupper(md5("STARTUP-LIMITED".md5("BITRIX".LICENSE_KEY."LICENCE"))),0,6)."-LD";
 		switch ($ModuleKey) {
 			case $MatrixKey: 
 				$Type="C";
 				break;
+            case $MatrixKey2:
+                $Type="L";
+                break;
 			case "FREE":
 				$Type="F";
 				break;
@@ -23,9 +27,15 @@ class CoffeeStartupLicense
 		global $APPLICATION; 
 		$link = $APPLICATION->GetProperty("CopyRightLink");
 		$CopyRight = GetMessage("CopyRightLink");
+        $CopyRight2 = GetMessage("COPYRIGHT_GRAYGRIDS");
 		if ($link == $CopyRight) {
 			$CopyRightError = "1";
 		}
+        elseif ($this->Type() == "L") {
+            if ($link == $CopyRight or $link == $CopyRight2) {
+                $CopyRightError = "1";
+            }
+        }
 		elseif ($this->Type() == "C") {
 			$CopyRightError = "1";
 		}
