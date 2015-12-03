@@ -137,7 +137,7 @@ $services_code = '
 		"PAGER_TEMPLATE" => ".default",
 		"DISPLAY_TOP_PAGER" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"PAGER_TITLE" => "Новости",
+		"PAGER_TITLE" => "",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -199,7 +199,7 @@ $contacts_code = '
 		"PAGER_TEMPLATE" => ".default",
 		"DISPLAY_TOP_PAGER" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"PAGER_TITLE" => "Новости",
+		"PAGER_TITLE" => "",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
@@ -243,6 +243,7 @@ if ($PageView == "longread") {
 	CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/_index.php", array("CONTACTS_CODE" => $contacts_code));
     CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/_index.php", array("SERVICES_CODE" => $services_code));
     CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/_index.php", array("STARTUP_SLIDE_ID" => $iblockID));
+    CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/_index.php", array("SLIDER_ABOUT_TITLE" => GetMessage("SLIDER_ABOUT_TITLE")));
 
 }
 elseif ($PageView == "pages") {
