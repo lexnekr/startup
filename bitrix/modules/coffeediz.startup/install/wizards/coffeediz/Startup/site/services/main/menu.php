@@ -25,5 +25,7 @@ elseif ($PageView == "pages") {
     $fileto = WIZARD_SITE_PATH.".top.menu.php";
     @copy($fileby, $fileto);
 }
+
+CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH.".top.menu.php", array("SITE_DIR" => WIZARD_SITE_DIR));
 //END IMPORT MENU FILES
 ?>
