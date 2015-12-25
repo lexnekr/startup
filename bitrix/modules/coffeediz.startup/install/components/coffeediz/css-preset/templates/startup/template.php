@@ -7,6 +7,14 @@ $this->setFrameMode(true);?>
     <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/css/presets/red.css');?>
 <?elseif($arParams['CSS_PRESET'] == "mblue"):?>
     <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/css/presets/mblue.css');?>
+<?elseif($arParams['CSS_PRESET'] == "lgreen"):?>
+    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/css/presets/lgreen.css');?>
+<?elseif($arParams['CSS_PRESET'] == "orange"):?>
+    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/css/presets/orange.css');?>
+<?elseif($arParams['CSS_PRESET'] == "purple"):?>
+    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/css/presets/purple.css');?>
+<?elseif($arParams['CSS_PRESET'] == "coffee"):?>
+    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH.'/assets/css/presets/coffee.css');?>
 <?endif?>
 
 

@@ -80,44 +80,87 @@ class SelectColorThemeStep extends CWizardStep
 <tbody>
 <tr>
 	<td>
-		'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/default.jpg", 167, 100, "border=0 vspace=15").'
+		<label for="default">'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/default.jpg", 167, 100, "border=0 vspace=15").'</label>
 	</td>
 	<td>
-		'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/blue.jpg", 167, 100, "border=0 vspace=15").'
+		<label for="blue">'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/blue.jpg", 167, 100, "border=0 vspace=15").'</label>
 	</td>
 	<td>
-		'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/red.jpg", 167, 100, "border=0 vspace=15").'
+		<label for="red">'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/red.jpg", 167, 100, "border=0 vspace=15").'</label>
 	</td>
 	<td>
-		'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/mblue.jpg", 167, 100, "border=0 vspace=15").'
-	</td>
-</tr>
-<tr>
-	<td>
-		'.GetMessage("wiz_ColorTheme_default").'
-	</td>
-	<td>
-		'.GetMessage("wiz_ColorTheme_blue").'
-	</td>
-	<td>
-		'.GetMessage("wiz_ColorTheme_red").'
-	</td>
-	<td>
-		'.GetMessage("wiz_ColorTheme_mblue").'
+		<label for="mblue">'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/mblue.jpg", 167, 100, "border=0 vspace=15").'</label>
 	</td>
 </tr>
 <tr>
 	<td>
-		'.$this->ShowRadioField("ColorTheme", "").'
+		<label for="default">'.GetMessage("wiz_ColorTheme_default").'</label>
 	</td>
 	<td>
-		'.$this->ShowRadioField("ColorTheme", "blue").'
+		<label for="blue">'.GetMessage("wiz_ColorTheme_blue").'</label>
 	</td>
 	<td>
-		'.$this->ShowRadioField("ColorTheme", "red").'
+		<label for="red">'.GetMessage("wiz_ColorTheme_red").'</label>
 	</td>
 	<td>
-		'.$this->ShowRadioField("ColorTheme", "mblue").'
+		<label for="mblue">'.GetMessage("wiz_ColorTheme_mblue").'</label>
+	</td>
+</tr>
+<tr>
+	<td>
+		'.$this->ShowRadioField("ColorTheme", "", array("id" => "default")).'
+	</td>
+	<td>
+		'.$this->ShowRadioField("ColorTheme", "blue", array("id" => "blue")).'
+	</td>
+	<td>
+		'.$this->ShowRadioField("ColorTheme", "red", array("id" => "red")).'
+	</td>
+	<td>
+		'.$this->ShowRadioField("ColorTheme", "mblue", array("id" => "mblue")).'
+	</td>
+</tr>
+
+<tr>
+	<td>
+		<label for="lgreen">'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/lgreen.jpg", 167, 110, "border=0 vspace=15").'</label>
+	</td>
+	<td>
+		<label for="purple">'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/purple.jpg", 167, 110, "border=0 vspace=15").'</label>
+	</td>
+	<td>
+		<label for="orange">'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/orange.jpg", 167, 110, "border=0 vspace=15").'</label>
+	</td>
+	<td>
+		<label for="coffee">'.CFile::ShowImage("/bitrix/wizards/coffeediz/Startup/images/ColorTheme/coffee.jpg", 167, 110, "border=0 vspace=15").'</label>
+	</td>
+</tr>
+<tr>
+	<td>
+		<label for="lgreen">'.GetMessage("wiz_ColorTheme_lgreen").'</label>
+	</td>
+	<td>
+		<label for="purple">'.GetMessage("wiz_ColorTheme_purple").'</label>
+	</td>
+	<td>
+		<label for="orange">'.GetMessage("wiz_ColorTheme_orange").'</label>
+	</td>
+	<td>
+		<label for="coffee">'.GetMessage("wiz_ColorTheme_coffee").'</label>
+	</td>
+</tr>
+<tr>
+	<td>
+		'.$this->ShowRadioField("ColorTheme", "lgreen", array("id" => "lgreen")).'
+	</td>
+	<td>
+		'.$this->ShowRadioField("ColorTheme", "purple", array("id" => "purple")).'
+	</td>
+	<td>
+		'.$this->ShowRadioField("ColorTheme", "orange", array("id" => "orange")).'
+	</td>
+	<td>
+		'.$this->ShowRadioField("ColorTheme", "coffee", array("id" => "coffee")).'
 	</td>
 </tr>
 </tbody>
