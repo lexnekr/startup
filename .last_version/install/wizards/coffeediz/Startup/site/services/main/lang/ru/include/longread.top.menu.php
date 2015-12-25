@@ -2,70 +2,70 @@
 $aMenuLinks = Array(
     Array(
         "В начало",
-        SITE_DIR."#header",
+        "#SITE_DIR##header",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Возможности",
-        SITE_DIR."#services",
+        "#SITE_DIR##services",
         Array(),
         Array(),
         ""
     ),
     Array(
         "О нас",
-        SITE_DIR."#about",
+        "#SITE_DIR##about",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Команда",
-        SITE_DIR."#team",
+        "#SITE_DIR##team",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Портфолио",
-        SITE_DIR."#portfolio",
+        "#SITE_DIR##portfolio",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Почему мы",
-        SITE_DIR."#why-chose",
+        "#SITE_DIR##why-chose",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Цены",
-        SITE_DIR."#pricing",
+        "#SITE_DIR##pricing",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Блог",
-        SITE_DIR."#blog",
+        "#SITE_DIR##blog",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Отзывы",
-        SITE_DIR."#testimonial",
+        "#SITE_DIR##testimonial",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Контакты",
-        SITE_DIR."#connected",
+        "#SITE_DIR##connected",
         Array(),
         Array(),
         ""

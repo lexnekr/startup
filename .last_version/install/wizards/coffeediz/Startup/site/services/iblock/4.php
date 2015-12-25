@@ -116,9 +116,9 @@ if ($PageView == "longread") {
 }
 elseif ($PageView == "pages") {
 	CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/_index.php", array("BLOG_CODE" => ""));
-
-	CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."blog/index.php", array("STARTUP_BLOG_ID" => $iblockID));
-	CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."blog/index.php", array("SLIDER_ABOUT_TITLE" => GetMessage("SLIDER_ABOUT_TITLE")));
 }
 
+CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."blog/index.php", array("STARTUP_BLOG_ID" => $iblockID));
+CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."blog/index.php", array("SLIDER_ABOUT_TITLE" => GetMessage("SLIDER_ABOUT_TITLE")));
+CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."blog/index.php", array("SITE_DIR" => WIZARD_SITE_DIR));
 ?>

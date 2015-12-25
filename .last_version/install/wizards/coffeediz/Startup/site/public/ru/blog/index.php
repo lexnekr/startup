@@ -90,7 +90,7 @@ $APPLICATION->SetTitle("Наш Блог");
 		"CATEGORY_IBLOCK" => "",
 		"CATEGORY_CODE" => "CATEGORY",
 		"CATEGORY_ITEMS_COUNT" => "5",
-		"SEF_FOLDER" => "/blog/",
+		"SEF_FOLDER" => "#SITE_DIR#blog/",
 		"NUM_NEWS" => "20",
 		"NUM_DAYS" => "30",
 		"YANDEX" => "N",

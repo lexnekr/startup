@@ -37,4 +37,22 @@ if ($handle) {
 }
 copy(WIZARD_THEME_ABSOLUTE_PATH . "/favicon.ico", WIZARD_SITE_PATH . "favicon.ico");
 
+
+$arNewUrlRewrite = array(
+    array(
+        "CONDITION" => "#^".WIZARD_SITE_DIR."blog/#",
+        "RULE" => "",
+        "ID" => "bitrix:news",
+        "PATH" => WIZARD_SITE_DIR."blog/index.php"
+    )
+);
+
+foreach ($arNewUrlRewrite as $arUrl)
+{
+    if (!in_array($arUrl, $arUrlRewrite))
+    {
+        CUrlRewriter::Add($arUrl);
+    }
+}
+
 ?>
