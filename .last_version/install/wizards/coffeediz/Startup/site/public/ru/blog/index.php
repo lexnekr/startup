@@ -39,7 +39,9 @@ $APPLICATION->SetTitle("Наш Блог");
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"USE_SHARE" => "N",
+		"USE_SHARE" => "Y",
+        "USE_OPEN_GRAPH" => "#USE_OPEN_GRAPH#",
+        "TWITTER_SITE" => "#TWITTER_SITE#",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"LIST_ACTIVE_DATE_FORMAT" => "",
 		"LIST_FIELD_CODE" => array(
@@ -100,6 +102,8 @@ $APPLICATION->SetTitle("Наш Блог");
 		"DETAIL_TITLE" => "",
 		"DETAIL_PADDING_TOP" => "Y",
 		"TITLE_TYPE" => "h1",
+        "USE_SCHEMA_ORG_ARTICLE" => "#USE_SCHEMA_ORG_ARTICLE#",
+        "SCHEMA_ORG_ARTICLE_TYPE" => "#SCHEMA_ORG_ARTICLE_TYPE#",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

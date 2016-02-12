@@ -14,3 +14,25 @@
 .service-box .content a {
     color: white;
 }
+.social_share:hover {
+    cursor: pointer;
+}
+
+.social_share_icons {
+    display: flex;
+}
+
+.social_share_icon {
+    padding: 5px;
+img {
+    width: 100%;
+    display: block;
+}
+}
+
+@for $i from 1 through 10 {
+    .social_share_icon:nth-last-child($i):first-child,
+    .social_share_icon:nth-last-child($i):first-child ~ .social_share_icon {
+        width: percentage(1/$i);
+    }
+}

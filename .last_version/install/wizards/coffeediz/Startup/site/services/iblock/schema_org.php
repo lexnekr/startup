@@ -62,6 +62,12 @@ CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/sect_footer.php", array(
     "SITE_ID" => WIZARD_SITE_ID,
 ));
 
+CWizardUtil::ReplaceMacros(WIZARD_SITE_PATH."/blog/index.php", array(
+    "USE_OPEN_GRAPH" => htmlspecialcharsbx($wizard->GetVar("wiz_OpenGraph_settings_checkbox")),
+    "TWITTER_SITE" => htmlspecialcharsbx($wizard->GetVar("wiz_TWITTER_SITE")),
+    "USE_SCHEMA_ORG_ARTICLE" => htmlspecialcharsbx($wizard->GetVar("wizSchemaOrgArticle_settings_checkbox")),
+    "SCHEMA_ORG_ARTICLE_TYPE" => htmlspecialcharsbx($wizard->GetVar("wizSchemaOrgArticle_settings_TYPE")),
+));
 
 $PageView = $wizard->GetVar("PageView");
 

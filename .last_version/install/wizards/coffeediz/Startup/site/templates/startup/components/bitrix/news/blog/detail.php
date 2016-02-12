@@ -57,6 +57,9 @@ $this->setFrameMode(true);
 		"ELEMENT_CODE" => $arResult["VARIABLES"]["ELEMENT_CODE"],
 		"IBLOCK_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["news"],
 		"USE_SHARE" => $arParams["USE_SHARE"],
+        "USE_SHARE_VIEW" => $arParams["USE_SHARE_VIEW"],
+        "USE_OPEN_GRAPH" => $arParams["USE_OPEN_GRAPH"],
+        "TWITTER_SITE" => $arParams["TWITTER_SITE"],
 		"SHARE_HIDE" => $arParams["SHARE_HIDE"],
 		"SHARE_TEMPLATE" => $arParams["SHARE_TEMPLATE"],
 		"SHARE_HANDLERS" => $arParams["SHARE_HANDLERS"],
@@ -65,6 +68,8 @@ $this->setFrameMode(true);
 		"AUTHOR_TITLE" => $arParams["AUTHOR_TITLE"],
 		"OTHER_ARTICLES_TITLE" => $arParams["OTHER_ARTICLES_TITLE"],
 		"OTHER_NEWS_TITLE" => $arParams["OTHER_NEWS_TITLE"],
+        "USE_SCHEMA_ORG_ARTICLE" => $arParams["USE_SCHEMA_ORG_ARTICLE"],
+        "SCHEMA_ORG_ARTICLE_TYPE" => $arParams["SCHEMA_ORG_ARTICLE_TYPE"],
 		"ADD_ELEMENT_CHAIN" => (isset($arParams["ADD_ELEMENT_CHAIN"]) ? $arParams["ADD_ELEMENT_CHAIN"] : '')
 	),
 	$component

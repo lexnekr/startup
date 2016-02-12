@@ -274,6 +274,8 @@ class SchemaOrgStep extends CWizardStep
                 "wiz_SchemaOrgAdress_settings_LOGO" => $wiz_SchemaOrgAdress_settings_LOGO,
                 "wiz_SchemaOrgBreadcrumb_settings_checkbox" => "Y",
                 "wiz_SchemaOrgPerson_settings_checkbox" => "Y",
+                "wiz_OpenGraph_settings_checkbox" => "Y",
+                "wizSchemaOrgArticle_settings_checkbox" => "Y",
 
                             )
         );
@@ -296,6 +298,14 @@ class SchemaOrgStep extends CWizardStep
             "SportsOrganization" => GetMessage("wiz_SchemaOrgAdress_settings_TYPE_default_SportsOrganization"),
         );
 
+        $wizSchemaOrgArticle_settings_TYPEs = array(
+            "" => GetMessage("wizSchemaOrgArticle_settings_TYPE_default"),
+            "BlogPosting" => GetMessage("wizSchemaOrgArticle_settings_TYPE_BlogPosting"),
+            "NewsArticle" => GetMessage("wizSchemaOrgArticle_settings_TYPE_NewsArticle"),
+            "ScholarlyArticle" => GetMessage("wizSchemaOrgArticle_settings_TYPE_ScholarlyArticle"),
+            "MedicalScholarlyArticle" => GetMessage("wizSchemaOrgArticle_settings_TYPE_MedicalScholarlyArticle"),
+        );
+
         $this->content .= '<h1>'.GetMessage("wiz_SchemaOrgTitle").'</h1>';
         $this->content .= $this->ShowCheckboxField("wiz_SchemaOrg_settings_checkbox", "Y", Array("id" => "wiz_SchemaOrg_settings_checkbox")).GetMessage("wiz_Yes");
         $this->content .= '
@@ -313,6 +323,9 @@ class SchemaOrgStep extends CWizardStep
 <style>
 .small {
   width: 400px;
+}
+.x-small {
+  width: 200px;
 }
 </style>
 
@@ -345,6 +358,24 @@ class SchemaOrgStep extends CWizardStep
                 <th colspan="2">
                     <h1 style="color:red;">'.GetMessage("wiz_SchemaOrg_settings_title").'</h1>
                 </th>
+            </tr>
+            <tr>
+                <td>
+                    '.$this->ShowCheckboxField("wiz_OpenGraph_settings_checkbox", "Y", Array("id" => "wiz_OpenGraph_settings_checkbox")).GetMessage("wiz_OpenGraph_settings_edit").'
+                </td>
+                <td id="wiz_OpenGraph_settings">
+                    <script>
+                        document.getElementById("wiz_OpenGraph_settings_checkbox").onchange = function(){
+                            if (this.checked) {
+                                 document.getElementById("wiz_OpenGraph_settings").style.display="block";
+                            }
+                            else {
+                                document.getElementById("wiz_OpenGraph_settings").style.display="none";
+                            }
+                        }
+                    </script>
+                    '.GetMessage("wiz_TWITTER_SITE").$this->ShowInputField('text', 'wiz_TWITTER_SITE', array("id" => "wiz_TWITTER_SITE", "class" => "wizard-field x-small")).'
+                </td>
             </tr>
             <tr>
                 <td>
@@ -393,6 +424,24 @@ class SchemaOrgStep extends CWizardStep
 
                 </td>
             </tr>
+                        <tr>
+                <td>
+                    '.$this->ShowCheckboxField("wizSchemaOrgArticle_settings_checkbox", "Y", Array("id" => "wizSchemaOrgArticle_settings_checkbox")).GetMessage("wizSchemaOrgArticle_settings_edit").'
+                </td>
+                <td id="wizSchemaOrgArticle_settings">
+                    <script>
+                        document.getElementById("wizSchemaOrgArticle_settings_checkbox").onchange = function(){
+                            if (this.checked) {
+                                 document.getElementById("wizSchemaOrgArticle_settings").style.display="block";
+                            }
+                            else {
+                                document.getElementById("wizSchemaOrgArticle_settings").style.display="none";
+                            }
+                        }
+                    </script>
+                    '.GetMessage("wizSchemaOrgArticle_settings_TYPE_Text").'<br>'.$this->ShowSelectField("wizSchemaOrgArticle_settings_TYPE", $wizSchemaOrgArticle_settings_TYPEs, Array("id" => "wizSchemaOrgArticle_settings_TYPE")).'
+                </td>
+            </tr>
             <tr>
                 <td>
                     '.$this->ShowCheckboxField("wiz_SchemaOrgBreadcrumb_settings_checkbox", "Y", Array("id" => "wiz_SchemaOrgBreadcrumb_settings_checkbox")).GetMessage("wiz_SchemaOrgBreadcrumb_settings_edit").'
@@ -403,6 +452,7 @@ class SchemaOrgStep extends CWizardStep
                     '.$this->ShowCheckboxField("wiz_SchemaOrgPerson_settings_checkbox", "Y", Array("id" => "wiz_SchemaOrgPerson_settings_checkbox")).GetMessage("wiz_SchemaOrgPerson_settings_edit").'
                 </td>
             </tr>
+
             <tr>
                 <td colspan="2">
                     <h3 style="color:red;">'.GetMessage("wiz_SchemaOrg_settings_PS").'</h3>
