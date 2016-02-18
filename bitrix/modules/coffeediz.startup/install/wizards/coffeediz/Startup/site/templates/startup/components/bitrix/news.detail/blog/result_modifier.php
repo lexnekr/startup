@@ -42,4 +42,20 @@ while ($ob = $db_props->GetNext())
         $VALUES[$ob['CODE']] = $ob;
     }
 $arResult['AUTHOR']['PROPERTIES'] = $VALUES;
-;?>
+
+if(!empty($arResult['AUTHOR']['PROPERTIES']['TWITTER_LINK']['VALUE'])){
+    $twitter_author = "@" . $arResult['AUTHOR']['PROPERTIES']['TWITTER_LINK']['VALUE'];
+}
+else {
+    $twitter_author = "@" . $arParams["TWITTER_SITE"];
+}
+if(!empty($arParams["TWITTER_SITE"])){
+    $twitter_site = "@" . $arParams["TWITTER_SITE"];
+}
+else {
+    $twitter_site = "@" . $arResult['AUTHOR']['PROPERTIES']['TWITTER_LINK']['VALUE'];
+}
+$arResult['TWITTER_CREATOR'] = $twitter_author;
+$arResult['TWITTER_SITE'] = $twitter_site;
+
+?>

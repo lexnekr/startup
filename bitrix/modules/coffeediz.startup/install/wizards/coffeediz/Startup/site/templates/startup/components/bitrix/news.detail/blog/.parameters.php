@@ -22,14 +22,20 @@ $arTemplateParameters = array(
 		"TYPE" => "CHECKBOX",
 		"DEFAULT" => "Y",
 	),
-	"USE_SHARE" => Array(
-		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_USE_SHARE"),
-		"TYPE" => "CHECKBOX",
-		"MULTIPLE" => "N",
-		"VALUE" => "Y",
-		"DEFAULT" =>"N",
-		"REFRESH"=> "Y",
-	),
+    "USE_SHARE" => Array(
+        "NAME" => GetMessage("USE_SHARE"),
+        "TYPE" => "CHECKBOX",
+        "DEFAULT" => "Y",
+        "VALUE" => "Y",
+        "REFRESH" => "Y",
+    ),
+    "USE_OPEN_GRAPH" => Array(
+        "NAME" => GetMessage("USE_OPEN_GRAPH"),
+        "TYPE" => "CHECKBOX",
+        "DEFAULT" => "Y",
+        "VALUE" => "Y",
+        "REFRESH" => "Y",
+    ),
 	"AUTHOR_TITLE" => Array(
 		"NAME" => GetMessage("AUTHOR_TITLE"),
 		"TYPE" => "STRING",
@@ -48,55 +54,49 @@ $arTemplateParameters = array(
 		"MULTIPLE" => "N",
 		"DEFAULT"=> GetMessage("OTHER_NEWS_DEFAULT"),
 	),
-
+    "USE_SCHEMA_ORG_ARTICLE" => Array(
+        "NAME" => GetMessage("USE_SCHEMA_ORG_ARTICLE"),
+        "TYPE" => "CHECKBOX",
+        "DEFAULT" => "Y",
+        "VALUE" => "Y",
+        "REFRESH" => "Y",
+    ),
 );
 
 if ($arCurrentValues["USE_SHARE"] == "Y")
 {
-	$arTemplateParameters["SHARE_HIDE"] = array(
-		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_SHARE_HIDE"),
-		"TYPE" => "CHECKBOX",
-		"VALUE" => "Y",
-		"DEFAULT" => "N",
-	);
-
-	$arTemplateParameters["SHARE_TEMPLATE"] = array(
-		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_SHARE_TEMPLATE"),
-		"DEFAULT" => "",
-		"TYPE" => "STRING",
-		"MULTIPLE" => "N",
-		"COLS" => 25,
-		"REFRESH"=> "Y",
-	);
-	
-	if (strlen(trim($arCurrentValues["SHARE_TEMPLATE"])) <= 0)
-		$shareComponentTemlate = false;
-	else
-		$shareComponentTemlate = trim($arCurrentValues["SHARE_TEMPLATE"]);
-
-	include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/components/bitrix/main.share/util.php");
-
-	$arHandlers = __bx_share_get_handlers($shareComponentTemlate);
-
-	$arTemplateParameters["SHARE_HANDLERS"] = array(
-		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_SHARE_SYSTEM"),
-		"TYPE" => "LIST",
-		"MULTIPLE" => "Y",
-		"VALUES" => $arHandlers["HANDLERS"],
-		"DEFAULT" => $arHandlers["HANDLERS_DEFAULT"],
-	);
-
-	$arTemplateParameters["SHARE_SHORTEN_URL_LOGIN"] = array(
-		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_SHARE_SHORTEN_URL_LOGIN"),
-		"TYPE" => "STRING",
-		"DEFAULT" => "",
-	);
-	
-	$arTemplateParameters["SHARE_SHORTEN_URL_KEY"] = array(
-		"NAME" => GetMessage("T_IBLOCK_DESC_NEWS_SHARE_SHORTEN_URL_KEY"),
-		"TYPE" => "STRING",
-		"DEFAULT" => "",
-	);
+    $arComponentParameters["PARAMETERS"]["USE_SHARE_VIEW"] = Array(
+        "NAME" => GetMessage("USE_SHARE_VIEW"),
+        "TYPE" => "LIST",
+        "SORT" => 50,
+        "VALUES" => array(
+            "" => GetMessage("square_c"),
+            "_c" => GetMessage("circle"),
+        ),
+    );
+}
+if ($arCurrentValues["USE_OPEN_GRAPH"] == "Y")
+{
+    $arComponentParameters["PARAMETERS"]["TWITTER_SITE"] = Array(
+        "NAME" => GetMessage("TWITTER_SITE"),
+        "TYPE" => "STRING",
+        "MULTIPLE" => "N",
+    );
+}
+if ($arCurrentValues["USE_SCHEMA_ORG_ARTICLE"] == "Y")
+{
+    $arTemplateParameters["SCHEMA_ORG_ARTICLE_TYPE"] = array(
+        "NAME" => GetMessage("SCHEMA_ORG_ARTICLE_TYPE"),
+        "TYPE" => "LIST",
+        "SORT" => 50,
+        "VALUES" => array(
+            "" => GetMessage("wizSchemaOrgArticle_settings_TYPE_default"),
+            "BlogPosting" => GetMessage("wizSchemaOrgArticle_settings_TYPE_BlogPosting"),
+            "NewsArticle" => GetMessage("wizSchemaOrgArticle_settings_TYPE_NewsArticle"),
+            "ScholarlyArticle" => GetMessage("wizSchemaOrgArticle_settings_TYPE_ScholarlyArticle"),
+            "MedicalScholarlyArticle" => GetMessage("wizSchemaOrgArticle_settings_TYPE_MedicalScholarlyArticle"),
+        ),
+    );
 }
 
 ?>
